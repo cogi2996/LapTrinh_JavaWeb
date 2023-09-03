@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="SayHi.sayHi"/>
+    <fullyQualifiedTypeName name="Car.Car"/>
+    <fullyQualifiedTypeName name="Vehicle.Vehicle"/>
+    <fullyQualifiedTypeName name="Animal"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="java.util.ConcurrentModificationException"/>
+    <fullyQualifiedTypeName name="java.awt.image.ReplicateScaleFilter"/>
+    <fullyQualifiedTypeName name="javax.jws.WebService"/>
+    <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="org.apache.jasper.tagplugins.jstl.core.Out"/>
+    <fullyQualifiedTypeName name="java.util.Enumeration"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="javax.servlet.annotation.WebInitParam"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="javax.servlet.ServletConfig"/>
+</qualifiedTypeNameHistroy>

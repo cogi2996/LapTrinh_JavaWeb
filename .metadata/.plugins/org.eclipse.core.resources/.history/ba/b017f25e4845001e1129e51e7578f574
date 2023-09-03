@@ -1,0 +1,5 @@
+package iostar.vn.controller;
+
+public class HelloServlet {
+
+}

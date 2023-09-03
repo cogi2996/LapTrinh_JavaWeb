@@ -1,0 +1,5 @@
+package viettel.telecom;
+
+public class HelloServlet {
+
+}
