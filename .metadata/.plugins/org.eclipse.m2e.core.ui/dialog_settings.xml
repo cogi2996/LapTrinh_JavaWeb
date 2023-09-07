@@ -47,12 +47,14 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="iotstar.vn"/>
 			<item value="viettel.telecom"/>
 			<item value="s"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="Hello1"/>
 			<item value="ServletViettel"/>
 			<item value="helloViettel"/>
 			<item value="g"/>
