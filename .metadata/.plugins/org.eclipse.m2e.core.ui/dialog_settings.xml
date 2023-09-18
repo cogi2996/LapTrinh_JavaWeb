@@ -2,6 +2,10 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\ACER\eclipse-workspace\BanHang\src\main\webapp\views\category\listcategory.jsp"/>
+			<item value="D:\năm 3\lập trình web\tuần_05\src\main\java\hcmute\controllers\DB.java"/>
+			<item value="D:\năm 3\lập trình web\tuần_05\pom.xml"/>
+			<item value="D:\năm 3\lập trình web\tuần_05"/>
 			<item value="C:\Users\ACER\eclipse-workspace\HelloServlet\src\main\java\vn\iotstar\HelloServlet.java"/>
 			<item value="C:\Users\ACER\eclipse-workspace\hello\src\main\java\iostar\vn\controller\HelloServlet.java"/>
 			<item value="C:\Users\ACER\eclipse-workspace\Lab01"/>
@@ -47,17 +51,12 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="iotstar.vn"/>
-			<item value="viettel.telecom"/>
-			<item value="s"/>
+			<item value="hcmute"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="Hello1"/>
-			<item value="ServletViettel"/>
-			<item value="helloViettel"/>
-			<item value="g"/>
+			<item value="BanHang"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -68,7 +67,6 @@
 			<item value="[name]"/>
 		</list>
 		<list key="version">
-			<item value="1.0"/>
 			<item value="0.0.1-SNAPSHOT"/>
 		</list>
 	</section>

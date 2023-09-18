@@ -1,8 +1,10 @@
 INDEX VERSION 1.134
-C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3585970540.index
-\HelloServlet\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2929891282.index
 \HelloServlet\src\main\java
+C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3585970540.index
+\HelloServlet\src\main\java
+C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\301777291.index
+\BanHang\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2155701544.index
 \Lab01\src
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\936022430.index
