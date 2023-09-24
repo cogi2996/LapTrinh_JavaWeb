@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\ACER\eclipse-workspace\BanHang\pom.xml"/>
+			<item value="C:\Users\ACER\eclipse-workspace\BanHang\src\main\java\hcmute\DAO\CategoryDAOImpl.java"/>
 			<item value="C:\Users\ACER\eclipse-workspace\BanHang\src\main\webapp\views\category\listcategory.jsp"/>
 			<item value="D:\năm 3\lập trình web\tuần_05\src\main\java\hcmute\controllers\DB.java"/>
 			<item value="D:\năm 3\lập trình web\tuần_05\pom.xml"/>
@@ -56,6 +58,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="BanHangCopy"/>
 			<item value="BanHang"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -67,6 +70,7 @@
 			<item value="[name]"/>
 		</list>
 		<list key="version">
+			<item value="1.0"/>
 			<item value="0.0.1-SNAPSHOT"/>
 		</list>
 	</section>

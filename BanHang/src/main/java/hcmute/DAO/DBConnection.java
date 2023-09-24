@@ -19,7 +19,9 @@ public class DBConnection {
 	public static Connection getConnection() throws IOException {
 		con = null;
 		try {
+			// đăng kí driver mysql trong driver manager
 			DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
+			// kết nối driver mysql
 			con =  (Connection)DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);
 		} catch (SQLException ex) {
 			// TODO: handle exception
