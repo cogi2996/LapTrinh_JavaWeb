@@ -19,19 +19,31 @@ import hcmute.DAO.CategoryDAOImpl;
 import hcmute.DAO.DBConnection;
 import hcmute.DAO.iCategoryDAO;
 import hcmute.models.CategoryModel;
+import hcmute.services.CategoryServiceImpl;
+import hcmute.services.ICategoryService;
 
-@WebServlet(urlPatterns = { "/category/listcate" })
+@WebServlet(urlPatterns = { "/category/listcate","/category/findOne","/category/edit"})
 public class CategoryController extends HttpServlet {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	iCategoryDAO categoryDao = new CategoryDAOImpl(); // Lấy hàm trong class implement
+	ICategoryService categoryService = new CategoryServiceImpl(); // Lấy hàm trong class implement
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		String url = req.getRequestURI().toString();
+		
+		System.out.println("here 1 "+url);
+		if(url.contains("findOne")) {
+			findOne(req,resp);
+		}
+		else if (url.contains("edit"))
+		{
+			edit(req,resp);
+		}
 		try {
 			findAll(req, resp);
 		} catch (IOException e) {
@@ -43,12 +55,37 @@ public class CategoryController extends HttpServlet {
 		}
 	}
 
+	private void edit(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		// TODO Auto-generated method stub
+		System.out.println("BEGIN EDIT MODE");
+		try {
+			System.out.println(Integer.parseInt(req.getParameter("id")));
+			System.out.println(req.getParameter("NewCateName"));
+			System.out.println(req.getParameter("NewImages"));
+			categoryService.edit(Integer.parseInt(req.getParameter("id")), req.getParameter("NewCateName"), req.getParameter("NewImages"));
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("ERROR EDIT");
+		}
+	}	
+
+	private void findOne(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		int id = Integer.parseInt(req.getParameter("id"));
+		CategoryModel model = categoryService.findOne(id);
+		System.out.println(model);
+		req.setAttribute("model", model);
+		RequestDispatcher rd = req.getRequestDispatcher("/views/category/viewUpdate.jsp");
+		rd.forward(req, resp);
+	}
+
 	// hiển thị tất cả dữ liệu của category
 	private void findAll(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException, SQLException, ServletException {
 
 		// TODO Auto-generated method stub
-		List<CategoryModel> list =categoryDao.findAll();
+		List<CategoryModel> list =categoryService.findAll();
 		// Xử lí bài toán
 		
 		// đẩy dữ liệu ra view

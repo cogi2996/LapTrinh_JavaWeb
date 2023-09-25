@@ -9,9 +9,9 @@
 </head>
 <body>
 	<c:forEach var="item" items="${listcate}">
-        ${item.cateID}
+          <span><a href="findOne?id=${item.cateID}">${item.cateID}</a> - ${item.cateName}  - ${item.images}</span>
         <br>
-        ${item.cateName}
+        
     </c:forEach>
 </body>
 </html>
