@@ -9,5 +9,6 @@ public interface ICategoryService {
 	void insert(CategoryModel model);
 	void update(CategoryModel model);
 	CategoryModel findOne(int id);
-	void edit(int id,String NewCateName,String NewImages);
+	void edit(CategoryModel model);
+	void delete(int id);
 }

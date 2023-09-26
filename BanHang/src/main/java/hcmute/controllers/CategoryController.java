@@ -22,7 +22,7 @@ import hcmute.models.CategoryModel;
 import hcmute.services.CategoryServiceImpl;
 import hcmute.services.ICategoryService;
 
-@WebServlet(urlPatterns = { "/category/listcate","/category/findOne","/category/edit"})
+@WebServlet(urlPatterns = { "/category/listcate","/category/findOne"})
 public class CategoryController extends HttpServlet {
 
 	/**
@@ -40,10 +40,7 @@ public class CategoryController extends HttpServlet {
 		if(url.contains("findOne")) {
 			findOne(req,resp);
 		}
-		else if (url.contains("edit"))
-		{
-			edit(req,resp);
-		}
+	
 		try {
 			findAll(req, resp);
 		} catch (IOException e) {
@@ -55,20 +52,7 @@ public class CategoryController extends HttpServlet {
 		}
 	}
 
-	private void edit(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		// TODO Auto-generated method stub
-		System.out.println("BEGIN EDIT MODE");
-		try {
-			System.out.println(Integer.parseInt(req.getParameter("id")));
-			System.out.println(req.getParameter("NewCateName"));
-			System.out.println(req.getParameter("NewImages"));
-			categoryService.edit(Integer.parseInt(req.getParameter("id")), req.getParameter("NewCateName"), req.getParameter("NewImages"));
-			
-		} catch (Exception e) {
-			// TODO: handle exception
-			System.out.println("ERROR EDIT");
-		}
-	}	
+
 
 	private void findOne(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -76,7 +60,7 @@ public class CategoryController extends HttpServlet {
 		CategoryModel model = categoryService.findOne(id);
 		System.out.println(model);
 		req.setAttribute("model", model);
-		RequestDispatcher rd = req.getRequestDispatcher("/views/category/viewUpdate.jsp");
+		RequestDispatcher rd = req.getRequestDispatcher("/views/category/viewEdit.jsp");
 		rd.forward(req, resp);
 	}
 

@@ -11,5 +11,6 @@ public interface iCategoryDAO {
 	void insert(CategoryModel model);
 	void update(CategoryModel model);
 	CategoryModel findOne(int id);
-	void editModel(int id,String NewCateName, String NewImages);
+	void editModel(CategoryModel model);
+	void delete(int id);
 }

@@ -9,7 +9,7 @@
 </head>
 <body>
 	<c:forEach var="item" items="${listcate}">
-          <span><a href="findOne?id=${item.cateID}">${item.cateID}</a> - ${item.cateName}  - ${item.images}</span>
+          <span><a href="findOne?id=${item.cateID}">${item.cateID}</a> - ${item.cateName}  - ${item.images}</span> <button ><a href="delete?id=${item.cateID}">X</a></button>
         <br>
         
     </c:forEach>

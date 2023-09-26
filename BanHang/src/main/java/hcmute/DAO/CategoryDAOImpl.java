@@ -107,41 +107,39 @@ public class CategoryDAOImpl implements iCategoryDAO {
 	}
 
 	@Override
-	public void editModel(int id, String NewCateName, String NewImages) {
-	    try {
-	        System.out.println("EDIT MODEL MODE");
-	        CategoryModel oldModel = this.findOne(id);
-	        System.out.println(oldModel);
-	        System.out.println("newcatename: " + NewCateName);
-
-	        conn = new DBConnection().getConnection();
-	        if (!NewCateName.equals(oldModel.getCateName())) {
-	            System.out.println("name accept");
-	            String sql = "UPDATE Category SET CategoryName = ? WHERE CategoryID = ?";
-	            ps = conn.prepareStatement(sql);
-	            ps.setString(1, NewCateName);
-	            ps.setInt(2, id);
-	            ps.executeUpdate();
-	        }
-	        else if(!NewImages.equals(oldModel.getImages()))
-	        {
-	        	String sql = "UPDATE Category SET icon = ? WHERE CategoryID = ?";
-	        	ps = conn.prepareStatement(sql);
-	        	ps.setString(1, NewImages);
-	        	ps.setInt(2, id);
-	        	ps.executeUpdate();
-	        }
-	        conn.close();
-	    } catch (Exception e) {
-	        System.out.println("ERROR EDIT");
-	        e.printStackTrace();
-	    }
-	    
+	public void editModel(CategoryModel category) {
+		String sql = "UPDATE Category \r\n" + "SET CategoryName = ?,icon =?" + "WHERE CategoryID = ?;";
+		try {
+			conn = new DBConnection().getConnection();
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, category.getCateName());
+			ps.setString(2, category.getImages());
+			ps.setInt(3, category.getCateID());
+			ps.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
-
-		// update
-
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		String sql = "delete from Category" + " where CategoryID  = ?;";
+		try {
+			conn = new DBConnection().getConnection();
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1,id);
+			ps.executeUpdate();
+			System.out.println("DELETE DAO ACESS SUCCESS");
+			conn.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		
+		
 	}
 
+	// update
 
+}

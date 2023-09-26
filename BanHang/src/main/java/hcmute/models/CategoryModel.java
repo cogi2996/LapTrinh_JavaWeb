@@ -14,11 +14,11 @@ public class CategoryModel implements Serializable {
 	public CategoryModel() {
 		super();
 	}
-	public CategoryModel(int cateID, String images, String cateName) {
+	public CategoryModel(int cateID, String cateName,String images) {
 		super();
 		this.cateID = cateID;
-		this.images = images;
 		this.cateName = cateName;
+		this.images = images;
 	}
 	
 	// tạo getter và setter 
