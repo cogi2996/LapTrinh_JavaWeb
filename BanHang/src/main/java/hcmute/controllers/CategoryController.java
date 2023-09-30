@@ -22,7 +22,7 @@ import hcmute.models.CategoryModel;
 import hcmute.services.CategoryServiceImpl;
 import hcmute.services.ICategoryService;
 
-@WebServlet(urlPatterns = { "/category/listcate","/category/findOne"})
+@WebServlet(urlPatterns = { "/category/listcate", "/category/add", "/category/findOne", "/category/update","/category/delete" })
 public class CategoryController extends HttpServlet {
 
 	/**
@@ -35,24 +35,89 @@ public class CategoryController extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String url = req.getRequestURI().toString();
-		
-		System.out.println("here 1 "+url);
-		if(url.contains("findOne")) {
-			findOne(req,resp);
+
+		if (url.contains("add")) {
+			RequestDispatcher rd = req.getRequestDispatcher("/views/category/addcategory.jsp");
+			rd.forward(req, resp);
+		} else if (url.contains("listcate")) {
+			try {
+				findAll(req, resp);
+			} catch (IOException | SQLException | ServletException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} else if (url.contains("update")) {
+			System.out.println("find one entry");
+			findOne(req, resp);
 		}
-	
-		try {
-			findAll(req, resp);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		else if(url.contains("delete")) {
+			this.delete(req, resp);
 		}
+
 	}
 
+	private void delete(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+		int id = Integer.parseInt(req.getParameter("id"));
+		try {
+			categoryService.delete(id);
+			req.setAttribute("message", "Xoa thanh cong");
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			req.setAttribute("error", "Xoa that bai");
+		}
+		RequestDispatcher rd = req.getRequestDispatcher("listcate");
+		rd.forward(req, resp);
+	}
 
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String url = req.getRequestURI().toString();
+		if (url.contains("add")) {
+			try {
+				insert(req, resp);
+			} catch (IOException | SQLException | ServletException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} else if (url.contains("update")) {
+			update(req,resp);
+		}
+
+	}
+
+	private void update(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		// TODO Auto-generated method stub
+		int cateID = Integer.parseInt(req.getParameter("NewCateID"));
+		String NewCateName = req.getParameter("NewCateName");
+		String NewCateImg =  req.getParameter("NewImages");
+		CategoryModel NewCate = new CategoryModel(cateID,NewCateName,NewCateImg);
+		// use edit new model
+		categoryService.update(NewCate);
+		resp.sendRedirect(req.getContextPath() +"/category/listcate");
+		
+	}
+
+	private void insert(HttpServletRequest req, HttpServletResponse resp)
+			throws IOException, SQLException, ServletException {
+		req.setCharacterEncoding("UTF-8");
+		resp.setCharacterEncoding("UTF-8");
+		// Nhận dữ liệu từ form
+		String cateID = req.getParameter("cateID");
+		String cateName = req.getParameter("cateName");
+		String image = req.getParameter("images");
+		// init model
+		CategoryModel model = new CategoryModel();
+		model.setCateID(Integer.parseInt(cateID));
+		model.setCateName(cateName);
+		model.setImages(image);
+		// gọi phương thức insert từ service
+		categoryService.insert(model);
+		// chuyển view về lại list cate
+		// resp.sendRedirect(req.getContextPath()+ "/category/listcate");
+		this.findAll(req, resp);
+	}
 
 	private void findOne(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -69,9 +134,9 @@ public class CategoryController extends HttpServlet {
 			throws IOException, SQLException, ServletException {
 
 		// TODO Auto-generated method stub
-		List<CategoryModel> list =categoryService.findAll();
+		List<CategoryModel> list = categoryService.findAll();
 		// Xử lí bài toán
-		
+
 		// đẩy dữ liệu ra view
 		req.setAttribute("listcate", list);
 		// ngoài view sẽ bắt tham số listcate rồi render phần thiếu ra

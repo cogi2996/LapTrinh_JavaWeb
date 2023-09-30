@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="addcate" method="post">
+	<form action="add" method="post">
 	<label>Nhập category ID</label>
 	<input type="text" name = "cateID">
 	<label>Nhập category Name</label>

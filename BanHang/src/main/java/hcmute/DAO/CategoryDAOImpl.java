@@ -73,14 +73,7 @@ public class CategoryDAOImpl implements iCategoryDAO {
 
 	}
 
-	@Override
-	public void update(CategoryModel model) {
-		// TODO Auto-generated method stub
-		// xử lí dữ liệu update
-		String sql = "update INTO Category (CategoryID, CategoryName, icon) VALUE\r\n" + "(?, ?, ?)";
-		// field nào mới thì mới = không thì không cần thay đõi
-
-	}
+	
 
 	@Override
 	public CategoryModel findOne(int id) {
@@ -107,7 +100,7 @@ public class CategoryDAOImpl implements iCategoryDAO {
 	}
 
 	@Override
-	public void editModel(CategoryModel category) {
+	public void update(CategoryModel category) {
 		String sql = "UPDATE Category \r\n" + "SET CategoryName = ?,icon =?" + "WHERE CategoryID = ?;";
 		try {
 			conn = new DBConnection().getConnection();

@@ -10,7 +10,7 @@
 
 
 
-<form action="edit" method="post">
+<form action="update" method="post">
 	<input type="hidden" name="NewCateID" value=${model.cateID}>
 	name cate<input type="text" name ="NewCateName"  value=${model.cateName}> 
 	img link <input type="text" name ="NewImages" value=${model.images}> 

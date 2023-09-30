@@ -7,8 +7,7 @@ public interface ICategoryService {
 	// định nghĩa phương thức
 	List<CategoryModel> findAll();
 	void insert(CategoryModel model);
-	void update(CategoryModel model);
 	CategoryModel findOne(int id);
-	void edit(CategoryModel model);
+	void update(CategoryModel model);
 	void delete(int id);
 }
