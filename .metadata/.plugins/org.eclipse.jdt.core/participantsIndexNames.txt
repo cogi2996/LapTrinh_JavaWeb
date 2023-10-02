@@ -1,7 +1,13 @@
 INDEX VERSION 1.134
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\674424631.index
 \HelloServlet2\src\main\java
+C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\581432626.index
+\BanHang\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1517105804.index
+\BanHang\src\main\java
+C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3450887403.index
+\BanHang\src\main\java
+C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2745238426.index
 \BanHang\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\665498931.index
 \BanHangCopy\src\main\java
@@ -9,10 +15,14 @@ C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jsps
 \BanHang\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3585970540.index
 \HelloServlet\src\main\java
+C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1920283767.index
+\BanHang\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2584576592.index
 \BanHangCopy\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\936022430.index
 \HelloServlet\src\main\java
+C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3969793636.index
+\BanHang\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2155701544.index
 \Lab01\src
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2929891282.index

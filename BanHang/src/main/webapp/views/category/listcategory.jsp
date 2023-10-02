@@ -23,11 +23,12 @@
 		</thead>
 		<tbody>
 			<c:forEach var="item" items="${listcate}">
+			
 				<tr>
 					<td>${item.cateID}</td>
 					<td>${item.cateName}</td>
 					<td>${item.images}</td>
-					<td><a href ="update?id=${item.cateID}">Update</a> ||<a href ="delete?id=${item.cateID}"> Delete</td>
+					<td><a href =<c:url value = "update?id=${item.cateID}"></c:url>>Update</a> ||<a href ="delete?id=${item.cateID}"> Delete</td>
 				</tr>
 			</c:forEach>
 		</tbody>

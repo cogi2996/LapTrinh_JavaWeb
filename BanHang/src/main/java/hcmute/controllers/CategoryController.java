@@ -22,7 +22,8 @@ import hcmute.models.CategoryModel;
 import hcmute.services.CategoryServiceImpl;
 import hcmute.services.ICategoryService;
 
-@WebServlet(urlPatterns = { "/category/listcate", "/category/add", "/category/findOne", "/category/update","/category/delete" })
+@WebServlet(urlPatterns = { "/category/listcate", "/category/add", "/category/findOne", "/category/update",
+		"/category/delete" })
 public class CategoryController extends HttpServlet {
 
 	/**
@@ -49,9 +50,25 @@ public class CategoryController extends HttpServlet {
 		} else if (url.contains("update")) {
 			System.out.println("find one entry");
 			findOne(req, resp);
-		}
-		else if(url.contains("delete")) {
+		} else if (url.contains("delete")) {
 			this.delete(req, resp);
+		}
+
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String url = req.getRequestURI().toString();
+		if (url.contains("add")) {
+			try {
+				insert(req, resp);
+			} catch (IOException | SQLException | ServletException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} else if (url.contains("update")) {
+			update(req, resp);
 		}
 
 	}
@@ -70,33 +87,16 @@ public class CategoryController extends HttpServlet {
 		rd.forward(req, resp);
 	}
 
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		String url = req.getRequestURI().toString();
-		if (url.contains("add")) {
-			try {
-				insert(req, resp);
-			} catch (IOException | SQLException | ServletException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		} else if (url.contains("update")) {
-			update(req,resp);
-		}
-
-	}
-
 	private void update(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		// TODO Auto-generated method stub
 		int cateID = Integer.parseInt(req.getParameter("NewCateID"));
 		String NewCateName = req.getParameter("NewCateName");
-		String NewCateImg =  req.getParameter("NewImages");
-		CategoryModel NewCate = new CategoryModel(cateID,NewCateName,NewCateImg);
+		String NewCateImg = req.getParameter("NewImages");
+		CategoryModel NewCate = new CategoryModel(cateID, NewCateName, NewCateImg);
 		// use edit new model
 		categoryService.update(NewCate);
-		resp.sendRedirect(req.getContextPath() +"/category/listcate");
-		
+		resp.sendRedirect(req.getContextPath() + "/category/listcate");
+
 	}
 
 	private void insert(HttpServletRequest req, HttpServletResponse resp)
