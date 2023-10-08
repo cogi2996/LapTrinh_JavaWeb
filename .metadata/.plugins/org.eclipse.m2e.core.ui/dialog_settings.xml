@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\ACER\eclipse-workspace\HelloServlet\src\main\webapp\createSession.jsp"/>
 			<item value="C:\Users\ACER\eclipse-workspace\BanHang\pom.xml"/>
 			<item value="C:\Users\ACER\eclipse-workspace\BanHang\src\main\java\hcmute\DAO\CategoryDAOImpl.java"/>
 			<item value="C:\Users\ACER\eclipse-workspace\BanHang\src\main\webapp\views\category\listcategory.jsp"/>
@@ -53,11 +54,13 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="hcmute.vn"/>
 			<item value="hcmute"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="BanHangCP"/>
 			<item value="BanHangCopy"/>
 			<item value="BanHang"/>
 		</list>
