@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.apache.jasper.tagplugins.jstl.core.Out"/>
-    <fullyQualifiedTypeName name="javax.servlet.annotation.WebInitParam"/>
     <fullyQualifiedTypeName name="javax.security.auth.message.callback.PrivateKeyCallback.Request"/>
     <fullyQualifiedTypeName name="javax.xml.ws.Response"/>
     <fullyQualifiedTypeName name="java.security.Provider.Service"/>
@@ -41,7 +39,6 @@
     <fullyQualifiedTypeName name="hcmute.DAO.CategoryDAOImpl"/>
     <fullyQualifiedTypeName name="hcmute.DAO.iCategoryDAO"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="java.lang.Process"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
     <fullyQualifiedTypeName name="hcmute.models.Category"/>
@@ -52,12 +49,15 @@
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="com.mysql.cj.QueryReturnType"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="hcmute.models.ProductModel"/>
     <fullyQualifiedTypeName name="hcmute.services.ICategoryService"/>
-    <fullyQualifiedTypeName name="hcmute.DAO.IProductDAO"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="hcmute.DAO.ProductDAOImpl"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="hcmute.services.CategoryServiceImpl"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="hcmute.DAO.IProductDAO"/>
+    <fullyQualifiedTypeName name="hcmute.DAO.ProductDAOImpl"/>
+    <fullyQualifiedTypeName name="hcmute.services.IProductService"/>
+    <fullyQualifiedTypeName name="hcmute.services.ProductServiceImpl"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="hcmute.models.ProductModel"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 </qualifiedTypeNameHistroy>

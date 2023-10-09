@@ -17,12 +17,16 @@ import javax.servlet.http.HttpServletResponse;
 
 import hcmute.DAO.CategoryDAOImpl;
 import hcmute.DAO.DBConnection;
+import hcmute.DAO.IProductDAO;
 import hcmute.DAO.iCategoryDAO;
 import hcmute.models.CategoryModel;
+import hcmute.models.ProductModel;
 import hcmute.services.CategoryServiceImpl;
 import hcmute.services.ICategoryService;
+import hcmute.services.IProductService;
+import hcmute.services.ProductServiceImpl;
 
-@WebServlet(urlPatterns = { "/category/listcate", "/category/add", "/category/findOne", "/category/update",
+@WebServlet(urlPatterns = { "/manager-category/listcate", "/category/add", "/category/findOne", "/category/update",
 		"/category/delete" })
 public class CategoryController extends HttpServlet {
 
@@ -31,6 +35,7 @@ public class CategoryController extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 1L;
 	ICategoryService categoryService = new CategoryServiceImpl(); // Lấy hàm trong class implement
+	IProductService  productService = new ProductServiceImpl();
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -40,7 +45,8 @@ public class CategoryController extends HttpServlet {
 		if (url.contains("add")) {
 			RequestDispatcher rd = req.getRequestDispatcher("/views/category/addcategory.jsp");
 			rd.forward(req, resp);
-		} else if (url.contains("listcate")) {
+		} else 
+			if (url.contains("listcate")) {
 			try {
 				findAll(req, resp);
 			} catch (IOException | SQLException | ServletException e) {
@@ -50,7 +56,8 @@ public class CategoryController extends HttpServlet {
 		} else if (url.contains("update")) {
 			System.out.println("find one entry");
 			findOne(req, resp);
-		} else if (url.contains("delete")) {
+		}
+		else if (url.contains("delete")) {
 			this.delete(req, resp);
 		}
 
@@ -85,7 +92,7 @@ public class CategoryController extends HttpServlet {
 		}
 		RequestDispatcher rd = req.getRequestDispatcher("listcate");
 		rd.forward(req, resp);
-	}
+	}	
 
 	private void update(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		// TODO Auto-generated method stub
@@ -128,22 +135,26 @@ public class CategoryController extends HttpServlet {
 		RequestDispatcher rd = req.getRequestDispatcher("/views/category/viewEdit.jsp");
 		rd.forward(req, resp);
 	}
-
 	// hiển thị tất cả dữ liệu của category
 	private void findAll(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException, SQLException, ServletException {
 
 		// TODO Auto-generated method stub
-		List<CategoryModel> list = categoryService.findAll();
+		List<CategoryModel> listCate = categoryService.findAll();
+		List<ProductModel> listPro = productService.findAll();
+		System.out.println(listPro);
 		// Xử lí bài toán
 
 		// đẩy dữ liệu ra view
-		req.setAttribute("listcate", list);
+		req.setAttribute("listcate", listCate);
+		req.setAttribute("listpro", listPro);
 		// ngoài view sẽ bắt tham số listcate rồi render phần thiếu ra
 		// view sẽ lấy dữ liệu
-		RequestDispatcher rd = req.getRequestDispatcher("/views/category/listcategory.jsp");
+		
+//		RequestDispatcher rd = req.getRequestDispatcher("/views/category/listcategory.jsp");
+		RequestDispatcher rd = req.getRequestDispatcher("/web/home.jsp");
 		rd.forward(req, resp);
-
+	
 	}
 
 }

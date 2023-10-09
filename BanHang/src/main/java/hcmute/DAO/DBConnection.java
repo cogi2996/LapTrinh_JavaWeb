@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DBConnection {
-	private static String DB_URL = "jdbc:mysql://localhost:3306/sinhvien";
+	private static String DB_URL = "jdbc:mysql://localhost:3306/banhang";
 	private static String USER_NAME = "root"; // dùng trên máy cá nhân thì dùng root , còn sau này dùng trên host thì
 												// mới được cấp cho một user name để dùng
 	private static String PASSWORD = "29092003";
