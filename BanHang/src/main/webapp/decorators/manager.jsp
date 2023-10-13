@@ -8,8 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-		<table border="1">
-	
+	<table border="1">
+
 		<tr>
 			<td colspan="2"><%@ include file="/common/manager/header.jsp"%>
 			</td>
@@ -19,8 +19,7 @@
 			<td><decorator:body></decorator:body></td>
 		</tr>
 		<tr>
-			<td colspan="2">
-			<%@ include file="/common/manager/footer.jsp"%></td>
+			<td colspan="2"><%@ include file="/common/manager/footer.jsp"%></td>
 		</tr>
 	</table>
 </body>

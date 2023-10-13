@@ -26,7 +26,7 @@ import hcmute.services.ICategoryService;
 import hcmute.services.IProductService;
 import hcmute.services.ProductServiceImpl;
 
-@WebServlet(urlPatterns = { "/manager-category/listcate", "/category/add", "/category/findOne", "/category/update",
+@WebServlet(urlPatterns = { "/category/listcate", "/category/add", "/category/findOne", "/category/update",
 		"/category/delete" })
 public class CategoryController extends HttpServlet {
 

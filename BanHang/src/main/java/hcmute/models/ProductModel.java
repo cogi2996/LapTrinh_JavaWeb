@@ -34,6 +34,7 @@ public class ProductModel implements Serializable{
 		this.stoke = stoke;
 	}
 
+	
 	public int getProID() {
 		return proID;
 	}
@@ -50,20 +51,20 @@ public class ProductModel implements Serializable{
 		this.proName = proName;
 	}
 
-	public int getProPrice() {
-		return proPrice;
-	}
-
-	public void setProPrice(int proPrice) {
-		this.proPrice = proPrice;
-	}
-
 	public String getProDes() {
 		return proDes;
 	}
 
 	public void setProDes(String proDes) {
 		this.proDes = proDes;
+	}
+
+	public int getProPrice() {
+		return proPrice;
+	}
+
+	public void setProPrice(int proPrice) {
+		this.proPrice = proPrice;
 	}
 
 	public String getProImg() {
@@ -82,20 +83,20 @@ public class ProductModel implements Serializable{
 		this.cateID = cateID;
 	}
 
-	public int getAmount() {
-		return amount;
-	}
-
-	public void setAmount(int amount) {
-		this.amount = amount;
-	}
-
 	public int getSellerID() {
 		return sellerID;
 	}
 
 	public void setSellerID(int sellerID) {
 		this.sellerID = sellerID;
+	}
+
+	public int getAmount() {
+		return amount;
+	}
+
+	public void setAmount(int amount) {
+		this.amount = amount;
 	}
 
 	public int getStoke() {
@@ -108,10 +109,11 @@ public class ProductModel implements Serializable{
 
 	@Override
 	public String toString() {
-	    return "Product [proID=" + proID + ", proName=" + proName + ", proDes=" + proDes + ", proPrice=" + proPrice +
-	           ", proImg=" + proImg + ", cateID=" + cateID + ", sellerID=" + sellerID + ", amount=" + amount +
-	           ", stoke=" + stoke + "]";
+		return "ProductModel [proID=" + proID + ", proName=" + proName + ", proDes=" + proDes + ", proPrice=" + proPrice
+				+ ", proImg=" + proImg + ", cateID=" + cateID + ", sellerID=" + sellerID + ", amount=" + amount
+				+ ", stoke=" + stoke + "]";
 	}
+
 
 
 }
