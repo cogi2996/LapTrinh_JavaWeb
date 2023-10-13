@@ -7,6 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,7 +26,8 @@ public class XuLyDangKy extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-
+		RequestDispatcher rd = req.getRequestDispatcher("/home.jsp");
+		rd.forward(req, resp);
 	}
 
 	@Override
@@ -40,28 +42,33 @@ public class XuLyDangKy extends HttpServlet {
 			System.out.println(userModel);
 			// insert dữ liệu vào database
 			this.insert(userModel);
+
 			HttpSession session = req.getSession();
-//            session.setAttribute("uid", userModel.getUid());
-//            session.setAttribute("username", userModel.getName());
-//            // Thiết lập thời gian tồn tại của phiên làm việc trong 1 ngày (s)
-//            session.setMaxInactiveInterval(180);
-            resp.sendRedirect(req.getContextPath()+"/home.jsp"); // Chuyển hướng đến trang readSession
-			
+			session.setAttribute("uid", userModel.getUid());
+			session.setAttribute("username", userModel.getName());
+			// Thiết lập thời gian tồn tại của phiên làm việc trong 5 phút
+			session.setMaxInactiveInterval(60 * 5);
+
+			/*
+			 * RequestDispatcher rd = req.getRequestDispatcher("/home"); rd.forward(req,
+			 * resp);
+			 */ // Chuyển hướng đến trang readSession
+
+//			resp.sendRedirect(req.getContextPath()+"/home.jsp");
+
 		} catch (IOException | SQLException e) {
 			System.out.println("ERRROR DO POST");
 		}
 	}
 
-	public void insert (UserModel user) throws IOException, SQLException
-	{
-		String sql = "INSERT INTO user (uid, name, email) VALUES (?, ?, ?)";
+	public void insert(UserModel user) throws IOException, SQLException {
+		String sql = "INSERT INTO user (uid, name, email, pass) VALUES (?, ?, ?,?)";
 		conn = new DBConnection().getConnection();
 		ps = conn.prepareStatement(sql);
-        ps.setString(1, user.getUid());
-        ps.setString(2, user.getName());
-        ps.setString(3, user.getEmail());
-        ps.executeUpdate();
-        
-        
+		ps.setString(1, user.getUid());
+		ps.setString(2, user.getName());
+		ps.setString(3, user.getEmail());
+		ps.setString(4, user.getPass());
+		ps.executeUpdate();
 	}
 }

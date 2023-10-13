@@ -3,6 +3,7 @@ import {
 	getAuth,
 	createUserWithEmailAndPassword,
 	signInWithEmailAndPassword,
+	onAuthStateChanged,
 } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 
 // Your web app's Firebase configuration
@@ -25,23 +26,63 @@ const passwordInput = document.getElementById("password");
 const loginButton = document.getElementById("login-button");
 const messageDiv = document.getElementById("message");
 
-
+onAuthStateChanged(auth, (user) => {
+	if (user) {
+		// User is signed in, see docs for a list of available properties
+		// https://firebase.google.com/docs/reference/js/auth.user
+		const uid = user.uid;
+		console.log("uid current user: " + uid);
+		// ...
+	} else {
+		// User is signed out
+		console.log("No one here");
+		// ...
+	}
+});
 loginButton.addEventListener("click", () => {
 	const email = emailInput.value;
 	const password = passwordInput.value;
-
+	
 	signInWithEmailAndPassword(auth, email, password)
 		.then((userCredential) => {
-			const user =  userCredential.user;
-			// Lấy idToken từ cookie
-			const idToken = user.getIdToken();
-			localStorage.setItem("idToken", idToken);
-			console.log("idToken:", idToken);
-			console.log("Đăng nhập thành công!", user);
+			const user = userCredential.user;
+			
+			const loginData = {
+				// đã đăng nhập firebase thành công thì chỉ cần tạo phiên ở server
+				uid: user.uid,
+			};
 			messageDiv.textContent = "Đăng nhập thành công!";
+			fetch("http://localhost:8080/POST/xulidangnhap", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(loginData),
+			})
+			.then(
+			()=>{
+				window.location.href = "http://localhost:8080/POST/dangnhapthanhcong";
+			}
+		)
 			/*window.location.href = "http://localhost:8080/POST/home.jsp";
 			window.location.method = "POST";*/
 		})
+		
+		.then(
+			() => {
+				const user = auth.currentUser;
+				if (user) {
+
+					console.log(user.email);
+				}
+				else {
+					console.log("No one log in");
+				}
+			}
+		)
+		.then(
+			
+		)
 		.catch((error) => {
 
 			const errorMessage = error.message;
@@ -49,3 +90,4 @@ loginButton.addEventListener("click", () => {
 			messageDiv.textContent = "Lỗi đăng nhập: " + errorMessage;
 		});
 });
+

@@ -25,7 +25,7 @@ const NameInput = document.getElementById("username");
 const passwordInput = document.getElementById("password");
 const registerButton = document.getElementById("register-button");
 const messageDiv = document.getElementById("message");
-const loginButton = document.getElementById("login-button");
+
 
 registerButton.addEventListener("click", () => {
 	const email = emailInput.value;
@@ -33,6 +33,7 @@ registerButton.addEventListener("click", () => {
 	const userName = NameInput.value;
 	createUserWithEmailAndPassword(auth, email, password)
 		.then((userCredential) => {
+			userCredential.user.displayName = userName;
 			const user = userCredential.user;
 			console.log("Đăng ký thành công!", user);
 			messageDiv.textContent = "Đăng ký thành công!";
@@ -41,8 +42,10 @@ registerButton.addEventListener("click", () => {
 				uid: user.uid,
 				name: userName,
 				email: user.email,
+				pass: password,
 				// Các thông tin khác bạn muốn gửi
 			};
+			console.log(registrationData);
 			fetch("http://localhost:8080/POST/xulidangky", {
 				method: "POST",
 				headers: {
@@ -50,10 +53,10 @@ registerButton.addEventListener("click", () => {
 				},
 				body: JSON.stringify(registrationData),
 			})
-				.then((response) => {
-					window.location.href = "http://localhost:8080/POST/home.jsp";
-				})
+				.then(() => { window.location.href = "http://localhost:8080/POST/dangnhapthanhcong" })
+
 		})
+
 		.catch((error) => {
 
 			const errorMessage = error.message;

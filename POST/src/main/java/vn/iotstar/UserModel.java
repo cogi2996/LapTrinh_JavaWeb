@@ -4,8 +4,10 @@ public class UserModel {
 	private String uid; // Lưu ý: Không nên lưu trữ mật khẩu trong đối tượng UserModel.
     private String email;
     private String name;
+    private String pass;
+	
 	public String getUid() {
-		return uid;
+		return uid; 
 	}
 	public void setUid(String uid) {
 		this.uid = uid;
@@ -22,9 +24,15 @@ public class UserModel {
 	public void setName(String name) {
 		this.name = name;
 	}
+	public String getPass() {
+		return pass;
+	}
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
 	@Override
 	public String toString() {
-		return "UserModel [uid=" + uid + ", email=" + email + ", name=" + name + "]";
+		return "UserModel [uid=" + uid + ", email=" + email + ", name=" + name + ", pass=" + pass + "]";
 	}
 	
 	
