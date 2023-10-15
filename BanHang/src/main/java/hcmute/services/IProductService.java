@@ -6,4 +6,5 @@ import hcmute.models.ProductModel;
 
 public interface IProductService {
 	List<ProductModel> findAll();
+	List<ProductModel> findProductById(int id);
 }

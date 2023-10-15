@@ -13,5 +13,11 @@ public class ProductServiceImpl implements IProductService {
 		// TODO Auto-generated method stub
 		return ProductDAO.findAll();
 	}
+	@Override
+	public List<ProductModel> findProductById(int id) {
+		// TODO Auto-generated method stub
+		return ProductDAO.findProductById(id);
+	}
+	
 
 }

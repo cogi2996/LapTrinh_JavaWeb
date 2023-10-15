@@ -44,7 +44,7 @@ public class testResponse extends HttpServlet {
 	private List<PostModel> findAllPost()
 	{
 		
-		String sql = "select * from post limit 3";
+		String sql = "select * from post order by post_id desc limit 3";
 		List<PostModel> list = new ArrayList<PostModel>();
 		try {
 			conn = new DBConnection().getConnection();

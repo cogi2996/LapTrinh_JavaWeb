@@ -8,7 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
 	<table border="1" style="width: 100%">
 		<thead>
 			<th>ID</th>

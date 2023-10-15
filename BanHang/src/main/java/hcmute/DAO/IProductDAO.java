@@ -7,4 +7,5 @@ import hcmute.models.ProductModel;
 public interface IProductDAO {
 	
 	List<ProductModel> findAll();
+	List<ProductModel> findProductById(int id);
 }

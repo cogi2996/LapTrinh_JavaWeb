@@ -61,5 +61,39 @@ public class ProductDAOImpl implements IProductDAO {
 		}
 
 	}
+	@Override
+	public List<ProductModel> findProductById(int id) {
+		// TODO Auto-generated method stub
+		String sql = "select *\r\n"
+				+ "from product\r\n"
+				+ "where product.ProductID = ?";
+		List<ProductModel> list = new ArrayList<ProductModel>();
+		try {
+			conn = new DBConnection().getConnection();
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1,id);
+			rs = ps.executeQuery();
+			while(rs.next()) {
+				ProductModel pro = new ProductModel(
+						rs.getInt(1),
+						rs.getString(2),
+						rs.getString(3),
+						rs.getInt(4),
+						rs.getString(5),
+						rs.getInt(6),
+						rs.getInt(7),
+						rs.getInt(8),
+						rs.getInt(9)
+						);
+				System.out.println("pro:" +pro);
+				list.add(pro);
+			}
+			conn.close();
+			return list;
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return null;
+	}
 
 }

@@ -10797,3 +10797,215 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SESSION 2023-10-15 10:49:02.808 -----------------------------------------------
+eclipse.buildId=4.28.0.20230608-1200
+java.version=17.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.emf.ecore 2 0 2023-10-15 10:49:05.252
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY org.eclipse.jface 2 0 2023-10-15 10:49:36.988
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-10-15 10:49:36.988
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-10-15 10:49:42.381
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-10-15 10:49:42.552
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.0.4 from path "C:\Users\ACER\.p2\pool\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-10-15 10:49:42.757
+!MESSAGE [Info]	Typescript Server version info: {version=5.0.4, source=user-setting}
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-10-15 10:49:43.034
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ACER'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2023-10-15 13:16:07.226 -----------------------------------------------
+eclipse.buildId=4.28.0.20230608-1200
+java.version=17.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.emf.ecore 2 0 2023-10-15 13:16:09.830
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY org.eclipse.jface 2 0 2023-10-15 13:16:41.035
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-10-15 13:16:41.035
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-10-15 13:16:47.074
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-10-15 13:16:47.227
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.0.4 from path "C:\Users\ACER\.p2\pool\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-10-15 13:16:47.779
+!MESSAGE [Info]	Typescript Server version info: {version=5.0.4, source=user-setting}
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-10-15 13:16:48.079
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ACER'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 1 0 2023-10-15 13:18:20.343
+!MESSAGE Skipping argument '-Djava.endorsed.dirs=C:\apache-tomcat-9.0.65\endorsed' while launching Tomcat v9.0 Server at localhost
+!SESSION 2023-10-15 13:49:08.530 -----------------------------------------------
+eclipse.buildId=4.28.0.20230608-1200
+java.version=17.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.emf.ecore 2 0 2023-10-15 13:49:09.558
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY org.eclipse.jface 2 0 2023-10-15 13:49:12.794
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-10-15 13:49:12.794
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-10-15 13:49:17.186
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ACER'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2023-10-15 15:18:14.958 -----------------------------------------------
+eclipse.buildId=4.28.0.20230608-1200
+java.version=17.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.emf.ecore 2 0 2023-10-15 15:18:17.886
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY org.eclipse.jface 2 0 2023-10-15 15:18:51.851
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-10-15 15:18:51.851
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-10-15 15:18:58.724
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ACER'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 1 0 2023-10-15 15:22:42.637
+!MESSAGE Skipping argument '-Djava.endorsed.dirs=C:\apache-tomcat-9.0.65\endorsed' while launching Tomcat v9.0 Server at localhost
+
+!ENTRY org.eclipse.jst.server.tomcat.core 1 0 2023-10-15 16:04:00.687
+!MESSAGE Skipping argument '-Djava.endorsed.dirs=C:\apache-tomcat-9.0.65\endorsed' while launching Tomcat v9.0 Server at localhost
+
+!ENTRY org.eclipse.jst.server.tomcat.core 1 0 2023-10-15 16:04:01.225
+!MESSAGE Skipping argument '-Djava.endorsed.dirs=C:\apache-tomcat-9.0.65\endorsed' while launching Tomcat v9.0 Server at localhost
+
+!ENTRY org.eclipse.jst.server.tomcat.core 1 0 2023-10-15 16:09:21.068
+!MESSAGE Skipping argument '-Djava.endorsed.dirs=C:\apache-tomcat-9.0.65\endorsed' while launching Tomcat v9.0 Server at localhost
+
+!ENTRY org.eclipse.jst.server.tomcat.core 1 0 2023-10-15 16:09:21.544
+!MESSAGE Skipping argument '-Djava.endorsed.dirs=C:\apache-tomcat-9.0.65\endorsed' while launching Tomcat v9.0 Server at localhost
+
+!ENTRY org.eclipse.jst.server.tomcat.core 1 0 2023-10-15 16:12:55.642
+!MESSAGE Skipping argument '-Djava.endorsed.dirs=C:\apache-tomcat-9.0.65\endorsed' while launching Tomcat v9.0 Server at localhost
+
+!ENTRY org.eclipse.jst.server.tomcat.core 1 0 2023-10-15 16:12:56.151
+!MESSAGE Skipping argument '-Djava.endorsed.dirs=C:\apache-tomcat-9.0.65\endorsed' while launching Tomcat v9.0 Server at localhost
+
+!ENTRY org.eclipse.jst.server.tomcat.core 1 0 2023-10-15 16:21:34.002
+!MESSAGE Skipping argument '-Djava.endorsed.dirs=C:\apache-tomcat-9.0.65\endorsed' while launching Tomcat v9.0 Server at localhost
+
+!ENTRY org.eclipse.jst.server.tomcat.core 1 0 2023-10-15 16:21:34.505
+!MESSAGE Skipping argument '-Djava.endorsed.dirs=C:\apache-tomcat-9.0.65\endorsed' while launching Tomcat v9.0 Server at localhost
+
+!ENTRY org.eclipse.jst.server.tomcat.core 1 0 2023-10-15 16:22:40.599
+!MESSAGE Skipping argument '-Djava.endorsed.dirs=C:\apache-tomcat-9.0.65\endorsed' while launching Tomcat v9.0 Server at localhost
+
+!ENTRY org.eclipse.jst.server.tomcat.core 1 0 2023-10-15 16:22:41.066
+!MESSAGE Skipping argument '-Djava.endorsed.dirs=C:\apache-tomcat-9.0.65\endorsed' while launching Tomcat v9.0 Server at localhost
+
+!ENTRY org.eclipse.jst.server.tomcat.core 1 0 2023-10-15 16:25:04.369
+!MESSAGE Skipping argument '-Djava.endorsed.dirs=C:\apache-tomcat-9.0.65\endorsed' while launching Tomcat v9.0 Server at localhost
+
+!ENTRY org.eclipse.jst.server.tomcat.core 1 0 2023-10-15 16:25:04.852
+!MESSAGE Skipping argument '-Djava.endorsed.dirs=C:\apache-tomcat-9.0.65\endorsed' while launching Tomcat v9.0 Server at localhost

@@ -1,19 +1,38 @@
 package hcmute.controllers;
 
 import java.io.IOException;
+import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import hcmute.DAO.IProductDAO;
+import hcmute.DAO.ProductDAOImpl;
+import hcmute.models.ProductModel;
+import hcmute.services.IProductService;
+import hcmute.services.ProductServiceImpl;
+
 @WebServlet(urlPatterns = "/findprobycate")
 public class ProductController extends HttpServlet {
+	IProductService productService  = new ProductServiceImpl();
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		super.doGet(req, resp);
+		String url = req.getRequestURI().toString();
+		if(url.contains("findprobycate"))
+		{
+			System.out.println("findprobycate accesssed");
+			int cateId = Integer.parseInt(req.getParameter("cateid"));
+			List<ProductModel> list = productService.findProductById(cateId);
+			System.out.println("product in list: "+list.get(0));
+			req.setAttribute("listPro", list);
+			RequestDispatcher rd = req.getRequestDispatcher("/views/product/listproduct.jsp");
+			rd.forward(req, resp);
+		}
 	}
 	
 }

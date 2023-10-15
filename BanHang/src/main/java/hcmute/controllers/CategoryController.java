@@ -151,8 +151,8 @@ public class CategoryController extends HttpServlet {
 		// ngoài view sẽ bắt tham số listcate rồi render phần thiếu ra
 		// view sẽ lấy dữ liệu
 		
-//		RequestDispatcher rd = req.getRequestDispatcher("/views/category/listcategory.jsp");
-		RequestDispatcher rd = req.getRequestDispatcher("/web/home.jsp");
+		RequestDispatcher rd = req.getRequestDispatcher("/views/category/listcategory.jsp");
+		//RequestDispatcher rd = req.getRequestDispatcher("/web/home.jsp");
 		rd.forward(req, resp);
 	
 	}
