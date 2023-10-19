@@ -46,12 +46,13 @@ public class ProductDAOImpl implements IProductDAO {
 				//System.out.println(product);
 			}
 			conn.close();
+			return list;
 
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println("false");
 		}
-		return list;
+		return null;
 	}
 	public static void main(String[] args) {
 		try {
@@ -66,7 +67,7 @@ public class ProductDAOImpl implements IProductDAO {
 		// TODO Auto-generated method stub
 		String sql = "select *\r\n"
 				+ "from product\r\n"
-				+ "where product.ProductID = ?";
+				+ "where product.CategoryID = ?";
 		List<ProductModel> list = new ArrayList<ProductModel>();
 		try {
 			conn = new DBConnection().getConnection();
@@ -91,9 +92,102 @@ public class ProductDAOImpl implements IProductDAO {
 			conn.close();
 			return list;
 		} catch (Exception e) {
-			// TODO: handle exception
+			// TODO: handle excepti on
 		}
 		return null;
 	}
+	@Override
+	public void insert(ProductModel model) {
+		String sql = "INSERT INTO `banhang`.`product`\r\n"
+				+ "(\r\n"
+				+ "`ProductName`,\r\n"
+				+ "`Description`,\r\n"
+				+ "`Price`,\r\n"
+				+ "`imageLink`,\r\n"
+				+ "`CategoryID`,\r\n"
+				+ "`SellerID`,\r\n"
+				+ "`Amount`,\r\n"
+				+ "`stoke`)\r\n"
+				+ "VALUES (?,?,?,?,?,?,?,?)";
+		try {
+			conn = new DBConnection().getConnection(); 	
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, model.getProName());
+			ps.setString(2, model.getProDes());
+			ps.setInt(3, model.getProPrice());
+			ps.setString(4, model.getProImg());
+			ps.setInt(5, model.getCategory().getCateID());
+			ps.setInt(6, model.getSellerID());
+			ps.setInt(7, model.getAmount());
+			ps.setInt(8, model.getStoke());
+			ps.executeUpdate();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	@Override
+	public void update(ProductModel model) {
+		String sql = "UPDATE `banhang`.`product`\r\n"
+				+ "SET\r\n"
+				+ "`ProductID` = ?,\r\n"
+				+ "`ProductName` = ?,\r\n"
+				+ "`Description` = ?,\r\n"
+				+ "`Price` = ?,\r\n"
+				+ "`imageLink` = ?,\r\n"
+				+ "`CategoryID` = ?,\r\n"
+				+ "`SellerID` = ?,\r\n"
+				+ "`Amount` = ?,\r\n"
+				+ "`stoke` = ?\r\n"
+				+ "WHERE `ProductID` = ?;";
+		try {
+			conn = new DBConnection().getConnection(); 	
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, model.getProName());
+			ps.setString(2, model.getProDes());
+			ps.setInt(3, model.getProPrice());
+			ps.setString(4, model.getProImg());
+			ps.setInt(5, model.getCategory().getCateID());
+			ps.setInt(6, model.getSellerID());
+			ps.setInt(7, model.getAmount());
+			ps.setInt(8, model.getStoke());
+			ps.setInt(8, model.getProID());
+			ps.executeUpdate();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	@Override
+	public ProductModel findOne(int id) {
+		String sql = "select * from product where product.ProductID = ?";
+		try {
+			conn = new DBConnection().getConnection(); 	
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1,id);
+			rs = ps.executeQuery();
+			ProductModel product = new ProductModel();
+			while(rs.next()) {
+				
+				product.setProID(rs.getInt("ProductID"));
+				product.setProName(rs.getString("ProductName"));
+				product.setProDes(rs.getString("Description"));
+				product.setProPrice(rs.getInt("Price"));
+				product.setProImg(rs.getString("imageLink"));
+				product.setCateID(rs.getInt("CategoryID"));
+				product.setSellerID(rs.getInt("SellerID"));
+				product.setAmount(rs.getInt("Amount"));
+				product.setStoke(rs.getInt("stoke"));
+			}
+			
+			conn.close();
+			return product;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 
 }

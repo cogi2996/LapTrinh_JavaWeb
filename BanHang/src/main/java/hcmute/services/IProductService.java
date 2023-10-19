@@ -6,5 +6,8 @@ import hcmute.models.ProductModel;
 
 public interface IProductService {
 	List<ProductModel> findAll();
-	List<ProductModel> findProductById(int id);
+	List<ProductModel> findProductByCateId(int cateID);
+	void insert(ProductModel pro);
+	void update(ProductModel pro);
+	ProductModel findOne(int id);
 }

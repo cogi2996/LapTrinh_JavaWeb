@@ -16,6 +16,9 @@ public class ProductModel implements Serializable{
 	private int sellerID;
 	private int amount;
 	private int stoke;
+	
+	private CategoryModel category;
+	
 
 	public ProductModel() {
 		super();
@@ -34,7 +37,14 @@ public class ProductModel implements Serializable{
 		this.stoke = stoke;
 	}
 
-	
+
+	public CategoryModel getCategory() {
+		return category;
+	}
+
+	public void setCategory(CategoryModel category) {
+		this.category = category;
+	}
 	public int getProID() {
 		return proID;
 	}
@@ -111,8 +121,10 @@ public class ProductModel implements Serializable{
 	public String toString() {
 		return "ProductModel [proID=" + proID + ", proName=" + proName + ", proDes=" + proDes + ", proPrice=" + proPrice
 				+ ", proImg=" + proImg + ", cateID=" + cateID + ", sellerID=" + sellerID + ", amount=" + amount
-				+ ", stoke=" + stoke + "]";
+				+ ", stoke=" + stoke + ", category=" + category + "]";
 	}
+
+
 
 
 

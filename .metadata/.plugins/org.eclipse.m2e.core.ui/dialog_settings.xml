@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\ACER\eclipse-workspace\BanHang_jpaa\src\main\java\controllers\CategoryController.java"/>
+			<item value="C:\Users\ACER\eclipse-workspace\BanHang_JPA\pom.xml"/>
 			<item value="C:\Users\ACER\eclipse-workspace\HelloServlet\src\main\webapp\createSession.jsp"/>
 			<item value="C:\Users\ACER\eclipse-workspace\BanHang\pom.xml"/>
 			<item value="C:\Users\ACER\eclipse-workspace\BanHang\src\main\java\hcmute\DAO\CategoryDAOImpl.java"/>
@@ -54,6 +56,8 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="vn.iotstar"/>
+			<item value="iotstar.vn"/>
 			<item value="testHOME"/>
 			<item value="hcmute.vn"/>
 			<item value="hcmute"/>
@@ -61,6 +65,9 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="testJPA"/>
+			<item value="BanHang_jpaa"/>
+			<item value="BanHang_JPA"/>
 			<item value="POST"/>
 			<item value="BanHangCP"/>
 			<item value="BanHangCopy"/>
