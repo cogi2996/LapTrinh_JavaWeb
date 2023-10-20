@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.google.gson.JsonObject"/>
-    <fullyQualifiedTypeName name="com.google.gson.JsonParser"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
-    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
-    <fullyQualifiedTypeName name="vn.iotstar.DBConnection"/>
-    <fullyQualifiedTypeName name="vn.iotstar.PostModel"/>
-    <fullyQualifiedTypeName name="java.lang.InternalError"/>
     <fullyQualifiedTypeName name="hcmute.DAO.IProductDAO"/>
     <fullyQualifiedTypeName name="hcmute.services.IProductService"/>
     <fullyQualifiedTypeName name="hcmute.services.ProductServiceImpl"/>
     <fullyQualifiedTypeName name="hcmute.DAO.DBConnection"/>
-    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
-    <fullyQualifiedTypeName name="hcmute.DAO.ProductDAOImpl"/>
-    <fullyQualifiedTypeName name="hcmute.models.ProductModel"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="hcmute.services.ICategoryService"/>
     <fullyQualifiedTypeName name="hcmute.services.CategoryServiceImpl"/>
-    <fullyQualifiedTypeName name="hcmute.models.CategoryModel"/>
     <fullyQualifiedTypeName name="javax.persistence.NamedNativeQuery"/>
     <fullyQualifiedTypeName name="javax.persistence.Entity"/>
     <fullyQualifiedTypeName name="javax.persistence.Table"/>
@@ -30,11 +19,9 @@
     <fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
     <fullyQualifiedTypeName name="org.hibernate.metamodel.model.convert.spi.JpaAttributeConverter"/>
     <fullyQualifiedTypeName name="Dao.ICategoryDao"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
     <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
     <fullyQualifiedTypeName name="services.ICategoryService"/>
     <fullyQualifiedTypeName name="services.CategoryServiceImpl"/>
-    <fullyQualifiedTypeName name="org.apache.commons.beanutils.BeanUtils"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="JPAConfig.JPAConfig"/>
     <fullyQualifiedTypeName name="org.apache.commons.collections.bag.TypedBag"/>
@@ -48,11 +35,9 @@
     <fullyQualifiedTypeName name="javax.persistence.EntityTransaction"/>
     <fullyQualifiedTypeName name="javax.persistence.Id"/>
     <fullyQualifiedTypeName name="javax.persistence.Column"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
     <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
     <fullyQualifiedTypeName name="javax.persistence.FetchType"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="org.hibernate.annotations.ManyToAny"/>
     <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
     <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
@@ -60,4 +45,19 @@
     <fullyQualifiedTypeName name="vn.iotstar.DAO.ProductDaoImpl"/>
     <fullyQualifiedTypeName name="vn.iotstar.Entity.product"/>
     <fullyQualifiedTypeName name="vn.iotstar.Entity.Category"/>
+    <fullyQualifiedTypeName name="hcmute.DAO.ProductDAOImpl"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="hcmute.models.CategoryModel"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="javax.servlet.annotation.MultipartConfig"/>
+    <fullyQualifiedTypeName name="hcmute.models.ProductModel"/>
+    <fullyQualifiedTypeName name="org.apache.commons.beanutils.BeanUtils"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.net.http.HttpRequest"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.Part"/>
+    <fullyQualifiedTypeName name="hcmute.utils.Constant"/>
 </qualifiedTypeNameHistroy>

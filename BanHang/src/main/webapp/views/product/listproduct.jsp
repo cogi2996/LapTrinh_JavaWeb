@@ -8,6 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<a href= "<c:url value ="/admin-insertpro"/>">add product</a>
+<br>
 	<c:forEach var="item" items="${listPro}">
 		<span> <a href="<c:url value='update?id=${item.getProID()}'/>">${item.getProID()}</a>
 			- ${item.getProName()} - ${item.getProPrice()}

@@ -1,15 +1,20 @@
 package hcmute.controllers;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.http.HttpRequest;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.beanutils.BeanUtils;
 
 import hcmute.DAO.IProductDAO;
 import hcmute.DAO.ProductDAOImpl;
@@ -20,10 +25,12 @@ import hcmute.services.ICategoryService;
 import hcmute.services.IProductService;
 import hcmute.services.ProductServiceImpl;
 
-@WebServlet(urlPatterns = {"/findprobycate","/admin-insertpro"})
+@MultipartConfig(fileSizeThreshold = 1024*1024*10,  maxFileSize = 1024*1024*50,maxRequestSize = 1024*1024*50)
+@WebServlet(urlPatterns = { "/product/listpro", "/findprobycate", "/admin-insertpro" })
 public class ProductController extends HttpServlet {
-	IProductService productService  = new ProductServiceImpl();
+	IProductService productService = new ProductServiceImpl();
 	ICategoryService cateService = new CategoryServiceImpl();
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -37,13 +44,52 @@ public class ProductController extends HttpServlet {
 			req.setAttribute("listPro", list);
 			RequestDispatcher rd = req.getRequestDispatcher("/views/product/listproduct.jsp");
 			rd.forward(req, resp);
-		}
+		}	
 		else if(url.contains("admin-insertpro")) {
 			List<CategoryModel> listcate = cateService.findAll();
 			req.setAttribute("listcate", listcate);
 			RequestDispatcher rd = req.getRequestDispatcher("/views/product/addproduct.jsp");
 			rd.forward(req, resp);
 		}
+		else if(url.contains("listpro")) {
+			this.findAll(req, resp);
+		}
 	}
 	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String url = req.getRequestURL().toString();
+		if(url.contains("admin-insertpro")) {
+			this.insert(req,resp);
+		}
+	}
+
+	private void insert(HttpServletRequest req, HttpServletResponse resp) throws UnsupportedEncodingException {
+		req.setCharacterEncoding("UTF-8");
+		resp.setCharacterEncoding("UTF-8");
+		ProductModel model = new ProductModel();
+		try {
+			// Lấy dữ liệu từ jsp bằng beanutils
+			BeanUtils.populate(model, req.getParameterMap());
+			System.out.println("model được get từ beanutil:"+model);
+			// xử lí trường hợp images
+			if(req.getPart("imageLink").getSize()!=0)
+			{
+				String fileName = "" + System.currentTimeMillis();
+				model.setProImg(UploadUtils.processUpload("imageLink"),req,Constant.DIR + "\\products\\",fileName);;
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	void findAll(HttpServletRequest req,HttpServletResponse resp) throws ServletException, IOException {
+		List<ProductModel> listpro = productService.findAll();
+		req.setAttribute("listPro", listpro);
+		RequestDispatcher rd = req.getRequestDispatcher("/views/product/listproduct.jsp");
+		rd.forward(req, resp);
+		
+	}
 }

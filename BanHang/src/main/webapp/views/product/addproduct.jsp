@@ -10,13 +10,26 @@
 </head>
 <body>
 	<form action="admin-insertpro" method="post" enctype="multipart/form-data">
-	<label>Nhập category ID</label>
-	<input type="text" name = "proNamek">
-	<label>Nhập category Name</label>
-	<input type="text" name = "cateName">
-	<label>Nhập category images</label>
-	<input type="text" name = "images">
-	<input type ="submit" value= "Insert category">
+	<label>Nhập product name :</label>
+	<input type="text" name = "proName">
+	<br>
+	<label > Nhập desc:</label>
+	<textarea name="proDes" cols = 5 class ="form-control" style="width: 100%;"> </textarea>
+	<br>
+	
+	<label>Nhập price: </label>
+	<input type="text" name = "proPrice">
+	<label>Nhập link hinh: </label>
+	<input type="file" name = "imageLink"><br>
+	<label for="category">Category:</label>
+		<select name="cateID">
+			<c:forEach var = "item" items = "${listcate}">
+				<option value= "${item.getCateID()}">${item.cateName}</option>			
+			</c:forEach>
+		</select>
+	<label>Nhập stoke: </label>
+	<input type="text" name= "amount">
+	<input type ="submit" value= "Insert product">
 	</form>
 </body>
 </html>
