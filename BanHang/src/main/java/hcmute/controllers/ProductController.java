@@ -1,9 +1,6 @@
 package hcmute.controllers;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.http.HttpRequest;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -16,18 +13,22 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.beanutils.BeanUtils;
 
-import hcmute.DAO.IProductDAO;
-import hcmute.DAO.ProductDAOImpl;
 import hcmute.models.CategoryModel;
 import hcmute.models.ProductModel;
 import hcmute.services.CategoryServiceImpl;
 import hcmute.services.ICategoryService;
 import hcmute.services.IProductService;
 import hcmute.services.ProductServiceImpl;
+import hcmute.utils.Constant;
+import hcmute.utils.UploadUtils;
 
 @MultipartConfig(fileSizeThreshold = 1024*1024*10,  maxFileSize = 1024*1024*50,maxRequestSize = 1024*1024*50)
 @WebServlet(urlPatterns = { "/product/listpro", "/findprobycate", "/admin-insertpro" })
 public class ProductController extends HttpServlet {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	IProductService productService = new ProductServiceImpl();
 	ICategoryService cateService = new CategoryServiceImpl();
 
@@ -65,7 +66,7 @@ public class ProductController extends HttpServlet {
 		}
 	}
 
-	private void insert(HttpServletRequest req, HttpServletResponse resp) throws UnsupportedEncodingException {
+	private void insert(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
 		ProductModel model = new ProductModel();
@@ -77,12 +78,19 @@ public class ProductController extends HttpServlet {
 			if(req.getPart("imageLink").getSize()!=0)
 			{
 				String fileName = "" + System.currentTimeMillis();
-				model.setProImg(UploadUtils.processUpload("imageLink"),req,Constant.DIR + "\\products\\",fileName);;
+				// truyền vào url thư mục (path), file name, req và tên file mới
+				model.setProImg(UploadUtils.processUpload("imageLink",req,Constant.DIR + "\\products\\",fileName));
 			}
-			
+			model.setCategory(cateService.findOne(model.getCateID()));
+			productService.insert(model);
+			// thong bao 
+			req.setAttribute("product", model);
+			req.setAttribute("message", "Add successfull");
 		} catch (Exception e) {
 			e.printStackTrace();
+			req.setAttribute("error", "Add fails");
 		}
+		resp.sendRedirect(req.getContextPath()+"/product/listpro");
 	}
 
 	void findAll(HttpServletRequest req,HttpServletResponse resp) throws ServletException, IOException {

@@ -8,6 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<c:if test="${not empty message}">${message}</c:if>
+	<c:if test="${not empty error}">${error}</c:if>
 	<a href= "<c:url value ="/admin-insertpro"/>">add product</a>
 <br>
 	<c:forEach var="item" items="${listPro}">

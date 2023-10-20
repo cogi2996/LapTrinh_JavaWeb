@@ -16,7 +16,6 @@ public class ProductModel implements Serializable{
 	private int sellerID;
 	private int amount;
 	private int stoke;
-	
 	private CategoryModel category;
 	
 

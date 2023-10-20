@@ -144,7 +144,7 @@ public class CategoryController extends HttpServlet {
 		List<ProductModel> listPro = productService.findAll();
 		System.out.println(listPro);
 		// Xử lí bài toán
-
+		
 		// đẩy dữ liệu ra view
 		req.setAttribute("listcate", listCate);
 		req.setAttribute("listpro", listPro);
