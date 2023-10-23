@@ -39,19 +39,78 @@ public class CategoryDaoImpl implements ICategoryDao {
 		}
 	}
 
-	public static void main(String[] args) {
-		CategoryDaoImpl categoryDao = new CategoryDaoImpl();
-		Category cate = new Category();
-		cate.setCategoryName("haha");
-		cate.setIcon("hihi");
-		categoryDao.insert(cate);
-		// Gọi phương thức findall để lấy danh sách các category
-		List<Category> categories = categoryDao.findAll();
-
-		// In ra danh sách các category
-		for (Category category : categories) {
-			System.out.println(category);
+	@Override
+	public void update(Category cate) {
+		EntityManager enma = JpaConfig.getEntityManager();
+		EntityTransaction trans = enma.getTransaction();
+		try {
+			trans.begin();
+			enma.merge(cate);
+			trans.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			trans.rollback();
+			throw e;
+		} finally {
+			enma.close();
 		}
+
 	}
+
+	@Override
+	public void delete(int id) throws Exception {
+		EntityManager enma = JpaConfig.getEntityManager();
+		EntityTransaction trans = enma.getTransaction();
+		try {
+			trans.begin();
+			Category category = enma.find(Category.class, id);
+			if (category != null) {
+				enma.remove(category);
+			} else {
+				throw new Exception("Không tìm thấy");
+			}
+			trans.commit();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			trans.rollback();
+			throw e;
+		} finally {
+			enma.close();
+		}
+
+	}
+	
+	
+
+	public static void main(String[] args) throws Exception {
+		CategoryDaoImpl categoryDao = new CategoryDaoImpl();
+		//Category cate = new Category(4, "dasua", "lala", null);
+		//categoryDao.delete();
+//		List<Category> categories = categoryDao.findAll();
+//		
+//		// In ra danh sách các category
+//		for (Category category : categories) {
+//			System.out.println(category);
+//		}
+		System.out.println(categoryDao.findById(2));
+	}
+
+	@Override
+	public Category findById(int categoryId) {
+		EntityManager enma = JpaConfig.getEntityManager();
+		Category category = enma.find(Category.class,categoryId);
+		return category;
+	}
+
+	@Override
+	public List<Category> findAll(int page, int pagesize) {
+		EntityManager enma = JpaConfig.getEntityManager();
+		TypedQuery<Category> query = enma.createNamedQuery("Category.findAll", Category.class);
+		query.setFirstResult(page*pagesize);
+		query.setMaxResults(pagesize);
+		return query.getResultList();
+	}
+	
 
 }

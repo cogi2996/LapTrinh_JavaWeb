@@ -34,7 +34,7 @@ public class XuLyDangNhap extends HttpServlet{
 			// tạo obj giả nhằm lấy uid
 			User user = gson.fromJson(reader, User.class);
 			System.out.println(user);
-			// tạo UserModel session đang dùng
+			// tạo UserModel session đang dùngs
 			UserModel userSession = FindUser(user.getUid());
 			// tạo session
 			System.out.println("USER SESSION:"+userSession);
