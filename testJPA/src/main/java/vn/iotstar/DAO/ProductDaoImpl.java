@@ -18,7 +18,7 @@ public class ProductDaoImpl implements IProductDao {
 		TypedQuery<product> query = enma.createNamedQuery("product.findAll", product.class);
 		return query.getResultList();
 	}
-
+	// 
 	@Override
 	public void insert(product pro) {
 		EntityManager enma = JpaConfig.getEntityManager();
@@ -38,6 +38,7 @@ public class ProductDaoImpl implements IProductDao {
 		}
 		
 	}
+	///
 	public static void main(String[] args) {
 		IProductDao productDao = new ProductDaoImpl();
 		product pro = new product();

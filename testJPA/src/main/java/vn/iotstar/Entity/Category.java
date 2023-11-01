@@ -34,6 +34,7 @@ public class Category implements Serializable {
 	@OneToMany(mappedBy = "category", fetch = FetchType.EAGER)
 	private List<product> products;
 
+	  
 	public Category(int categoryID, String categoryName, String icon, List<product> products) {
 		super();
 		CategoryID = categoryID;

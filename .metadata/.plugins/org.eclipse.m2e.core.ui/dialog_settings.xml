@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\ACER\eclipse-workspace\BanHang\src\main\java\hcmute\controllers\CategoryController.java"/>
 			<item value="C:\Users\ACER\eclipse-workspace\testJPA\src\main\java\vn\iotstar\Entity\product.java"/>
 			<item value="C:\Users\ACER\eclipse-workspace\BanHang\src\main\java\hcmute\f.java"/>
 			<item value="C:\Users\ACER\eclipse-workspace\POST\pom.xml"/>
@@ -16,7 +17,6 @@
 			<item value="D:\năm 3\lập trình web\tuần_05"/>
 			<item value="C:\Users\ACER\eclipse-workspace\HelloServlet\src\main\java\vn\iotstar\HelloServlet.java"/>
 			<item value="C:\Users\ACER\eclipse-workspace\hello\src\main\java\iostar\vn\controller\HelloServlet.java"/>
-			<item value="C:\Users\ACER\eclipse-workspace\Lab01"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -59,11 +59,13 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="sADF"/>
 			<item value="hcmute.vn"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="asdf"/>
 			<item value="testJPQL"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -75,8 +77,8 @@
 			<item value="[name]"/>
 		</list>
 		<list key="version">
-			<item value="1"/>
 			<item value="0.0.1-SNAPSHOT"/>
+			<item value="1"/>
 		</list>
 	</section>
 	<section name="org.eclipse.m2e.core.pom.overview">
@@ -106,5 +108,23 @@
 			<item value="1.0"/>
 			<item value="0.0.1-SNAPSHOT"/>
 		</list>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item key="width" value="480"/>
+		<item key="height" value="531"/>
+		<item key="x" value="720"/>
+		<item key="y" value="162"/>
 	</section>
 </section>

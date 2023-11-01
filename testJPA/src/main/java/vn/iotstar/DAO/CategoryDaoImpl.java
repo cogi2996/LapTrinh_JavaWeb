@@ -16,7 +16,6 @@ public class CategoryDaoImpl implements ICategoryDao {
 		// TODO Auto-generated method stub
 		EntityManager enma = JpaConfig.getEntityManager();
 		TypedQuery<Category> query = enma.createNamedQuery("Category.findAll", Category.class);
-
 		return query.getResultList();
 	}
 
@@ -30,7 +29,6 @@ public class CategoryDaoImpl implements ICategoryDao {
 			enma.persist(category);
 			trans.commit();
 		} catch (Exception e) {
-			System.out.println("lỗi ở dao rồi ");
 			e.printStackTrace();
 			trans.rollback();
 			throw e;
@@ -89,7 +87,7 @@ public class CategoryDaoImpl implements ICategoryDao {
 		//categoryDao.delete();
 //		List<Category> categories = categoryDao.findAll();
 //		
-//		// In ra danh sách các category
+//		// In ra danh sách các category	
 //		for (Category category : categories) {
 //			System.out.println(category);
 //		}
