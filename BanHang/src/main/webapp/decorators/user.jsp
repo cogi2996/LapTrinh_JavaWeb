@@ -24,7 +24,7 @@
 </head>
 <body>
 
-	<table border="1">
+	<table border="1" style="width:100%;">
 
 		<tr>
 			<td colspan="2"><%@ include file="/common/user/header.jsp"%>
