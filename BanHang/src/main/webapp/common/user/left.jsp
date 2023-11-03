@@ -21,7 +21,6 @@
 					<td>${item.cateID}</td>
 					<td><a href='<c:url value = "/findprobycate?cateid=${item.cateID}"/>'>${item.cateName}</a></td>
 					<td>${item.images}</td>
-
 				</tr>
 			</c:forEach>
 		</tbody>

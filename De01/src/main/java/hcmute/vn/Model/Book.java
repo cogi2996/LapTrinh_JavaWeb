@@ -12,6 +12,15 @@ public class Book {
 	private Date publish_date;
 	private String cover_image;
 	private int quantity;
+	private int rating;
+
+	public int getRating() {
+		return rating;
+	}
+
+	public void setRating(int rating) {
+		this.rating = rating;
+	}
 
 	@Override
 	public String toString() {

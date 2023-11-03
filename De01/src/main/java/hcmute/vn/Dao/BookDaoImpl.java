@@ -107,4 +107,116 @@ public class BookDaoImpl implements IBookDao {
 
 	}
 
+	@Override
+	public int countAll() {
+		String sql = "select count(*) from books";
+		try {
+			conn = new DBConnection().getConnection();
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				return rs.getInt(1);
+			}
+		} catch (Exception e) {
+		}
+		return 0;
+	}
+
+	@Override
+	public List<Book> paginationPage(int index, int numberOfPage) {
+		List<Book> result = new ArrayList<Book>();
+		String sql = "SELECT * FROM books\r\n" + "ORDER BY bookid\r\n" + "LIMIT ? OFFSET ?;";
+		try {
+			conn = new DBConnection().getConnection();
+			PreparedStatement ps = conn.prepareStatement(sql);
+
+			ps.setInt(1, numberOfPage);
+			ps.setInt(2, index * numberOfPage);
+//			System.out.println("tham so 1: "+index * numberOfPage);
+//			System.out.println("tham so 2: "+ numberOfPage);
+			ResultSet rs = ps.executeQuery();
+			Book book;
+			while (rs.next()) {
+				book = new Book();
+				book.setBookid(rs.getInt("bookid"));
+				book.setDescription(rs.getString("description"));
+				book.setCover_image(rs.getString("cover_image"));
+				book.setPrice(rs.getInt("price"));
+				book.setPublisher(rs.getString("publisher"));
+				book.setIsbn(rs.getInt("isbn"));
+				book.setQuantity(rs.getInt("quantity"));
+				book.setPublish_date(rs.getDate("publish_date"));
+				book.setTitle(rs.getString("title"));
+				result.add(book);
+
+				System.out.println("book in paginnationPage" + book);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("end pagination");
+		return result;
+
+	}
+
+	@Override
+	public List<Book> findBookByAuthor(int author_id) {
+		String sql = "SELECT books.*\r\n"
+				+ "FROM books\r\n"
+				+ "INNER JOIN book_author ON books.bookid = book_author.bookid\r\n"
+				+ "WHERE book_author.author_id = ?;";
+		List<Book> list = new ArrayList<Book>();
+		
+		try {
+			conn = new DBConnection().getConnection();
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, author_id);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				Book book = new Book();
+				book.setBookid(rs.getInt("bookid"));
+				book.setTitle(rs.getString("title"));
+				book.setPrice(rs.getInt("price"));
+				book.setCover_image(rs.getString("cover_image"));
+				list.add(book);
+				System.out.println(book);
+			}
+			conn.close();
+
+		} catch (Exception e) {
+			System.out.println("false");
+		}
+		return list;
+	}
+
+	@Override
+	public List<Book> findAll_DESC() {
+		String sql = "SELECT books.*,rating.rating\r\n"
+				+ "FROM books\r\n"
+				+ "Inner JOIN rating ON books.bookid = rating.bookid\r\n"
+				+ "GROUP BY books.bookid,rating.rating\r\n"
+				+ "ORDER BY AVG(rating.rating) DESC;";
+		List<Book> list = new ArrayList<Book>();
+		try {
+			conn = new DBConnection().getConnection();
+			ps = conn.prepareStatement(sql);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				Book book = new Book();
+				book.setBookid(rs.getInt("bookid"));
+				book.setTitle(rs.getString("title"));
+				book.setPrice(rs.getInt("price"));
+				book.setCover_image(rs.getString("cover_image"));
+				book.setRating(rs.getInt("rating"));
+				list.add(book);
+				System.out.println(book);
+			}
+			conn.close();
+
+		} catch (Exception e) {
+			System.out.println("false");
+		}
+		return list;
+	}
+
 }

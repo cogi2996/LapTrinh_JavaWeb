@@ -10,13 +10,15 @@ import javax.servlet.http.HttpServletResponse;
 
 import hcmute.vn.Dao.BookDaoImpl;
 import hcmute.vn.Dao.IBookDao;
+import hcmute.vn.Service.BookServiceimpl;
+import hcmute.vn.Service.IBookService;
 @WebServlet(urlPatterns = "/admin-DeleteByBookID")
 public class DeleteBook extends HttpServlet{
-	IBookDao bookDao = new BookDaoImpl();
+	IBookService bookService = new BookServiceimpl();
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		int id = Integer.parseInt(req.getParameter("bookid"));
-		bookDao.delete(id);
+		bookService.delete(id);
 		resp.sendRedirect(req.getContextPath()+"/admin-listbook");
 	}
 }

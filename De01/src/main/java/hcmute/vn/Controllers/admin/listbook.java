@@ -12,14 +12,16 @@ import javax.servlet.http.HttpServletResponse;
 
 import hcmute.vn.Dao.IBookDao;
 import hcmute.vn.Model.Book;
+import hcmute.vn.Service.BookServiceimpl;
+import hcmute.vn.Service.IBookService;
 import hcmute.vn.Dao.BookDaoImpl;
 @WebServlet(urlPatterns = "/admin-listbook")
 public class listbook extends HttpServlet{
 	private static final long serialVersionUID = 1L;
-	IBookDao bookDao = new BookDaoImpl();
+	IBookService bookService = new BookServiceimpl();
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		List<Book> listbook = bookDao.findAll();
+		List<Book> listbook = bookService.findAll();
 		req.setAttribute("listbook", listbook);
 		RequestDispatcher rd = req.getRequestDispatcher("/views/admin/listbook.jsp");
 		rd.forward(req, resp);
