@@ -13,4 +13,5 @@ public interface IBookService {
 	List<Book> paginationPage(int index, int numberOfPage);
 	List<Book> findBookByAuthor(int author_id);
 	List<Book> findAll_DESC();
+	void insert(Book book);
 }

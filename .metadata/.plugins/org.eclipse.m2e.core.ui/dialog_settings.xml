@@ -65,6 +65,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="De07"/>
 			<item value="De01"/>
 			<item value="asdf"/>
 			<item value="testJPQL"/>

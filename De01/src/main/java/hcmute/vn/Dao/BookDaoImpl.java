@@ -12,7 +12,9 @@ public class BookDaoImpl implements IBookDao {
 	Connection conn = null;
 	PreparedStatement ps = null;
 	ResultSet rs = null;
-
+	public void test() {
+		System.out.println("heelo");
+	}
 	@Override
 	public List<Book> findAll() {
 		String sql = "select * from books";
@@ -161,12 +163,11 @@ public class BookDaoImpl implements IBookDao {
 
 	@Override
 	public List<Book> findBookByAuthor(int author_id) {
-		String sql = "SELECT books.*\r\n"
-				+ "FROM books\r\n"
+		String sql = "SELECT books.*\r\n" + "FROM books\r\n"
 				+ "INNER JOIN book_author ON books.bookid = book_author.bookid\r\n"
 				+ "WHERE book_author.author_id = ?;";
 		List<Book> list = new ArrayList<Book>();
-		
+
 		try {
 			conn = new DBConnection().getConnection();
 			ps = conn.prepareStatement(sql);
@@ -191,10 +192,8 @@ public class BookDaoImpl implements IBookDao {
 
 	@Override
 	public List<Book> findAll_DESC() {
-		String sql = "SELECT books.*,rating.rating\r\n"
-				+ "FROM books\r\n"
-				+ "Inner JOIN rating ON books.bookid = rating.bookid\r\n"
-				+ "GROUP BY books.bookid,rating.rating\r\n"
+		String sql = "SELECT books.*,rating.rating\r\n" + "FROM books\r\n"
+				+ "Inner JOIN rating ON books.bookid = rating.bookid\r\n" + "GROUP BY books.bookid,rating.rating\r\n"
 				+ "ORDER BY AVG(rating.rating) DESC;";
 		List<Book> list = new ArrayList<Book>();
 		try {
@@ -217,6 +216,28 @@ public class BookDaoImpl implements IBookDao {
 			System.out.println("false");
 		}
 		return list;
+	}
+
+	@Override
+	public void insert(Book book) {
+		String sql = "INSERT INTO books (isbn, title, publisher, price, description, publish_date, cover_image, quantity)\r\n"
+				+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?);\r\n";
+		try {
+			conn = new DBConnection().getConnection();
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, book.getIsbn()); // Change to getIsbn() to set ISBN
+			ps.setString(2, book.getTitle());
+			ps.setString(3, book.getPublisher());
+			ps.setInt(4, book.getPrice()); // Use setBigDecimal for DECIMAL
+			ps.setString(5, book.getDescription());
+			ps.setDate(6, book.getPublish_date());
+			ps.setString(7, book.getCover_image());
+			ps.setInt(8, book.getQuantity());
+			ps.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 	}
 
 }

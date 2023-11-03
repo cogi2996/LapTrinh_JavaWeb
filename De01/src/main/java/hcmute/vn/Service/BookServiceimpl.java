@@ -52,4 +52,10 @@ public class BookServiceimpl implements IBookService{
 		return bookDao.findAll_DESC();
 	}
 
+	@Override
+	public void insert(Book book) {
+		bookDao.insert(book);
+		
+	}
+
 }

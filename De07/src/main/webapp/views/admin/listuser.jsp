@@ -1,0 +1,57 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>User List</title>
+</head>
+<body>
+	<a href='<c:url value="/admin-addUser"></c:url>'>Add New User</a>
+	<table border="1" style="width: 100%;">
+		<thead>
+			<th>Username</th>
+			<th>Full Name</th>
+			<th>Email</th>
+			<th>Phone</th>
+			<th>Action</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td><c:forEach var="user" items="${listUser}">
+						<tr>
+							<td>${user.getUsername()}</td>
+							<td>${user.getFullname()}</td>
+							<td>${user.getEmail()}</td>
+							<td>${user.getPhone()}</td>
+							<td><a
+								href='<c:url value="/admin-UpdateUser?username=${user.getUsername()}"/>'>Update</a></td>
+							<td><a
+								href='<c:url value="/admin-DeleteUser?username=${user.getUsername()}"/>'>Delete</a></td>
+
+						</tr>
+
+					</c:forEach></td>
+
+			</tr>
+		</tbody>
+	</table>
+	<div class="col-md-8 col-sm-8">
+					<ul class="pagination pull-right">
+						<c:if test="${tag>1}">
+							<li><a
+								href="${pageContext.request.contextPath}/book?index=${tag-1}">&laquo;</a></li>
+						</c:if>
+						<c:forEach begin="1" end="${endP}" var="i">
+							<li class='${tag==i?"active":"" }'><a
+								href="${pageContext.request.contextPath}/book?index=${i}">${i}</a></li>
+						</c:forEach>
+						<c:if test="${tag<endP}">
+							<li><a
+								href="${pageContext.request.contextPath}/book?index=${tag+1}">&raquo;</a></li>
+						</c:if>
+					</ul>
+				</div>
+</body>
+</html>

@@ -26,5 +26,4 @@ public class DownloadImageController extends HttpServlet {
 			IOUtils.copy(new FileInputStream(file),resp.getOutputStream());
 		}
 	}
-	
 }

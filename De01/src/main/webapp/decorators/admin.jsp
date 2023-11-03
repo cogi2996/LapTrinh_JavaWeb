@@ -27,14 +27,14 @@
 	<table border="1" style="width:100%;">
 
 		<tr>
-			<td colspan="2"><%@ include file="/common/admin/header.jsp"%>
+			<td ><%@ include file="/common/admin/header.jsp"%>
 			</td>	
 		</tr>
 		<tr>
 			<td><decorator:body></decorator:body></td>
 		</tr>
 		<tr>
-			<td colspan="2" class="fixed-bottom bg-light "><%@ include file="/common/admin/footer.jsp"%>
+			<td  class="fixed-bottom bg-light "><%@ include file="/common/admin/footer.jsp"%>
 		</tr>
 	</table>
 			
