@@ -17,6 +17,7 @@
 					<a href="<c:url value="/author?id=${author.author_id}"/>">${author.author_name}</a>
 					<br />
 				</c:forEach></td>
+				
 			<td class="col-10" style="overflow: hidden;"><c:forEach
 					items="${books}" var="book">
 					<c:choose>

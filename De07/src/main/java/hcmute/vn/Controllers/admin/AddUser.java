@@ -18,7 +18,7 @@ import hcmute.vn.Service.UserServiceImpl;
 import hcmute.vn.utils.Constant;
 import hcmute.vn.utils.UploadUtils;
 
-@MultipartConfig(fileSizeThreshold = 1024 * 1024 * 10, maxFileSize = 1024 * 1024 * 50, maxRequestSize = 1024 * 1024* 50)
+@MultipartConfig(fileSizeThreshold = 1024*1024*10,  maxFileSize = 1024*1024*50,maxRequestSize = 1024*1024*50)
 @WebServlet(urlPatterns = "/admin-addUser")
 public class AddUser extends HttpServlet {
 	IUserService userService = new UserServiceImpl();
@@ -33,14 +33,16 @@ public class AddUser extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
-		User model = new User();
 		try {
-			// Lấy dữ liệu từ JSP bằng BeanUtils
+			User model = new User();
 			BeanUtils.populate(model, req.getParameterMap());
 			System.out.println("user dopost: " + model);
 			System.out.println("username : "+req.getParameter("Username"));
-
-			if (req.getPart("image").getSize() != 0) {
+			System.out.println("Password : "+req.getParameter("Password"));
+			System.out.println("Phone : "+req.getParameter("Phone"));
+			System.out.println("Fullname : "+req.getParameter("Fullname"));
+			System.out.println("Email : "+req.getParameter("Email"));
+			if (req.getPart("imageLink").getSize() != 0) {
 				String fileName = "" + System.currentTimeMillis();
 				// Xử lý tải lên ảnh và cập nhật trường Images trong User
 				model.setImages(UploadUtils.processUpload("image", req, Constant.DIR + "\\users\\", fileName));
@@ -50,7 +52,7 @@ public class AddUser extends HttpServlet {
 			userService.insert(model);
 
 			// Thông báo thành công
-			req.setAttribute("user", model);
+//			req.setAttribute("user", model);
 			req.setAttribute("message", "Thêm thành công");
 		} catch (Exception e) {
 			e.printStackTrace();

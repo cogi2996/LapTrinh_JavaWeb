@@ -21,17 +21,15 @@
 			<tr>
 				<td><c:forEach var="user" items="${listUser}">
 						<tr>
-							<td>${user.getUsername()}</td>
-							<td>${user.getFullname()}</td>
-							<td>${user.getEmail()}</td>
-							<td>${user.getPhone()}</td>
+							<td>${user.username}</td>
+					 		<td>${user.fullname}</td>
+							<td>${user.email}</td>
+							<td>${user.phone}</td>
 							<td><a
-								href='<c:url value="/admin-UpdateUser?username=${user.getUsername()}"/>'>Update</a></td>
+								href='<c:url value="/admin-UpdateUser?username=${user.username}"/>'>Update</a></td>
 							<td><a
-								href='<c:url value="/admin-DeleteUser?username=${user.getUsername()}"/>'>Delete</a></td>
-
-						</tr>
-
+								href='<c:url value="/admin-DeleteUser?username=${user.username}"/>'>Delete</a></td>
+						</tr> 
 					</c:forEach></td>
 
 			</tr>
@@ -41,15 +39,15 @@
 					<ul class="pagination pull-right">
 						<c:if test="${tag>1}">
 							<li><a
-								href="${pageContext.request.contextPath}/book?index=${tag-1}">&laquo;</a></li>
+								href="${pageContext.request.contextPath}/admin-listUser?index=${tag-1}">&laquo;</a></li>
 						</c:if>
 						<c:forEach begin="1" end="${endP}" var="i">
 							<li class='${tag==i?"active":"" }'><a
-								href="${pageContext.request.contextPath}/book?index=${i}">${i}</a></li>
+								href="${pageContext.request.contextPath}/admin-listUser?index=${i}">${i}</a></li>
 						</c:forEach>
 						<c:if test="${tag<endP}">
 							<li><a
-								href="${pageContext.request.contextPath}/book?index=${tag+1}">&raquo;</a></li>
+								href="${pageContext.request.contextPath}/admin-listUser?index=${tag+1}">&raquo;</a></li>
 						</c:if>
 					</ul>
 				</div>

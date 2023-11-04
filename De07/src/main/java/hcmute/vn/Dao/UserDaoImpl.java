@@ -1,11 +1,14 @@
 package hcmute.vn.Dao;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import hcmute.vn.Model.Favorites;
 import hcmute.vn.Model.User;
 
 public class UserDaoImpl implements IUserDao {
@@ -76,4 +79,92 @@ public class UserDaoImpl implements IUserDao {
 			e.printStackTrace();
 		}
 	}
+
+	@Override
+	public void detete(String username) {
+		String sql = "DELETE FROM Users WHERE Username = ?;";
+		try {
+			conn = new DBConnection().getConnection();
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, username);
+			ps.executeUpdate();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	@Override
+	public void update(User user) {
+		// TODO Auto-generated method stub
+		String sql = "UPDATE Users " + "SET Password = ?, Phone = ?, Fullname = ?, Email = ?, Images = ? "
+				+ "WHERE Username = ?;";
+		try {
+			conn = new DBConnection().getConnection();
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, user.getPassword());
+			ps.setString(2, user.getPhone());
+			ps.setString(3, user.getFullname());
+			ps.setString(4, user.getEmail());
+			ps.setString(5, user.getImages());
+			ps.setString(6, user.getUsername());
+			ps.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	@Override
+	public User findOne(String username) {
+		String sql = "SELECT * FROM Users WHERE Username = ?";
+		User model = new User();
+		try {
+			conn = new DBConnection().getConnection(); // Kết nối CSDL
+			ps = conn.prepareStatement(sql); // Chuẩn bị câu truy vấn
+			// Truyền tham số vào truy vấn
+			ps.setString(1, username);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				model.setUsername(rs.getString("Username"));
+				model.setPassword(rs.getString("Password"));
+				model.setPhone(rs.getString("Phone"));
+				model.setFullname(rs.getString("Fullname"));
+				model.setEmail(rs.getString("Email"));
+				model.setImages(rs.getString("Images"));
+			}
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace(); // In ra mã đỏ báo lỗi
+		}
+		return model;
+	}
+
+	@Override
+	public List<Favorites> findFavorByUsername(String username) {
+		String sql = "SELECT * FROM Favorites WHERE Username = ?";
+		List<Favorites> list = new ArrayList<Favorites>();
+		Favorites model;
+		try {
+			conn = new DBConnection().getConnection();
+			ps = conn.prepareStatement(sql); // Chuẩn bị câu truy vấn
+			// Truyền tham số vào truy vấn
+			ps.setString(1, username);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				model = new Favorites();
+				model.setFavoriteID(rs.getInt("FavoriteID"));
+				model.setLikedDate(rs.getDate("LikedDate"));
+				model.setVideoId(rs.getInt("VideoId"));
+				model.setUsername(rs.getString("Username"));
+				list.add(model);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return list;
+
+	}
+
 }

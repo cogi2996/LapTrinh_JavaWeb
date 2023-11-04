@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javax.swing.GroupLayout.Group"/>
-    <fullyQualifiedTypeName name="entity.GroupEntity"/>
-    <fullyQualifiedTypeName name="entity.GroupPost"/>
-    <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
-    <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
-    <fullyQualifiedTypeName name="entity.Group"/>
-    <fullyQualifiedTypeName name="javax.persistence.OneToOne"/>
     <fullyQualifiedTypeName name="javax.persistence.Entity"/>
     <fullyQualifiedTypeName name="javax.persistence.Id"/>
     <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
     <fullyQualifiedTypeName name="java.lang.Deprecated"/>
     <fullyQualifiedTypeName name="javax.servlet.annotation.WebFilter"/>
     <fullyQualifiedTypeName name="java.net.http.HttpRequest"/>
-    <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="hcmute.vn.Dao.IBookDaoImpl"/>
@@ -24,18 +16,15 @@
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="org.apache.commons.io.IOUtils"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
-    <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="hcmute.vn.Dao.IAuthorDao"/>
     <fullyQualifiedTypeName name="hcmute.vn.Dao.AuthorDaoImpl"/>
     <fullyQualifiedTypeName name="hcmute.vn.Service.IAuthorService"/>
     <fullyQualifiedTypeName name="hcmute.vn.Service.AuthorSeriveImpl"/>
     <fullyQualifiedTypeName name="hcmute.vn.Model.Author"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="hcmute.vn.Dao.BookDaoImpl"/>
     <fullyQualifiedTypeName name="hcmute.vn.Controllers.admin.listbook"/>
     <fullyQualifiedTypeName name="hcmute.vn.Model.Book"/>
     <fullyQualifiedTypeName name="Controllers.admin.listUser"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="Dao.IUserDao"/>
     <fullyQualifiedTypeName name="Dao.UserDaoImpl"/>
@@ -43,12 +32,7 @@
     <fullyQualifiedTypeName name="Service.UserServiceImpl"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="Model.User"/>
-    <fullyQualifiedTypeName name="hcmute.vn.Dao.IUserDao"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
     <fullyQualifiedTypeName name="javax.servlet.annotation.MultipartConfig"/>
-    <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
-    <fullyQualifiedTypeName name="hcmute.vn.Service.IUserService"/>
-    <fullyQualifiedTypeName name="hcmute.vn.Service.UserServiceImpl"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
     <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
@@ -57,7 +41,23 @@
     <fullyQualifiedTypeName name="org.apache.commons.beanutils.BeanUtils"/>
     <fullyQualifiedTypeName name="hcmute.vn.utils.UploadUtils"/>
     <fullyQualifiedTypeName name="hcmute.vn.utils.Constant"/>
+    <fullyQualifiedTypeName name="hcmute.vn.Dao.IUserDao"/>
+    <fullyQualifiedTypeName name="hcmute.vn.Service.IUserService"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="hcmute.vn.Model.User"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="hcmute.vn.Controllers.admin.listUser"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="hcmute.vn.Dao.DBConnection"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
     <fullyQualifiedTypeName name="hcmute.vn.Dao.UserDaoImpl"/>
+    <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="hcmute.vn.Model.Favorites"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="hcmute.vn.Service.UserServiceImpl"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.DisplayName"/>
+    <fullyQualifiedTypeName name="javabrains.MathUtils"/>
+    <fullyQualifiedTypeName name="java.lang.InternalError"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>

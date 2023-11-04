@@ -1,70 +1,78 @@
 package hcmute.vn.Model;
 
 public class User {
-	public String Username;
-	public String Password;
-	public String Phone;
-	public String Fullname;
-	public String Email;
-	public String Images;
-	
-	
-	
-	@Override
-	public String toString() {
-		return "User [Username=" + Username + ", Password=" + Password + ", Phone=" + Phone + ", Fullname=" + Fullname
-				+ ", Email=" + Email + ", Images=" + Images + "]";
-	}
-	public User(String username, String password, String phone, String fullname, String email, String images) {
-		super();
-		Username = username;
-		Password = password;
-		Phone = phone;
-		Fullname = fullname;
-		Email = email;
-		Images = images;
-	}
-	public User() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	
-	public String getUsername() {
-		return Username;
-	}
-	public void setUsername(String username) {
-		Username = username;
-	}
-	public String getPassword() {
-		return Password;
-	}
-	public void setPassword(String password) {
-		Password = password;
-	}
-	public String getPhone() {
-		return Phone;
-	}
-	public void setPhone(String phone) {
-		Phone = phone;
-	}
-	public String getFullname() {
-		return Fullname;
-	}
-	public void setFullname(String fullname) {
-		Fullname = fullname;
-	}
-	public String getEmail() {
-		return Email;
-	}
-	public void setEmail(String email) {
-		Email = email;
-	}
-	public String getImages() {
-		return Images;
-	}
-	public void setImages(String images) {
-		Images = images;
-	}
-	
+    private String username;
+    private String password;
+    private String phone;
+    private String fullname;
+    private String email;
+    private String images;
 
+    public User() {
+    	super();
+    }
+
+    public User(String username, String password, String phone, String fullname, String email, String images) {
+    	super();
+        this.username = username;
+        this.password = password;
+        this.phone = phone;
+        this.fullname = fullname;
+        this.email = email;
+        this.images = images;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getImages() {
+        return images;
+    }
+
+    public void setImages(String images) {
+        this.images = images;
+    }
+
+    @Override
+    public String toString() {
+        return "User [username=" + username + ", password=" + password + ", phone=" + phone + ", fullname=" + fullname
+                + ", email=" + email + ", images=" + images + "]";
+    }
 }
