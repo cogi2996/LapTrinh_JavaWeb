@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
     <fullyQualifiedTypeName name="javax.persistence.Id"/>
     <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
     <fullyQualifiedTypeName name="java.lang.Deprecated"/>
@@ -25,7 +24,6 @@
     <fullyQualifiedTypeName name="hcmute.vn.Controllers.admin.listbook"/>
     <fullyQualifiedTypeName name="hcmute.vn.Model.Book"/>
     <fullyQualifiedTypeName name="Controllers.admin.listUser"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="Dao.IUserDao"/>
     <fullyQualifiedTypeName name="Dao.UserDaoImpl"/>
     <fullyQualifiedTypeName name="Service.IUserService"/>
@@ -44,20 +42,22 @@
     <fullyQualifiedTypeName name="hcmute.vn.Dao.IUserDao"/>
     <fullyQualifiedTypeName name="hcmute.vn.Service.IUserService"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
-    <fullyQualifiedTypeName name="hcmute.vn.Model.User"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="hcmute.vn.Controllers.admin.listUser"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="hcmute.vn.Dao.DBConnection"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
-    <fullyQualifiedTypeName name="hcmute.vn.Dao.UserDaoImpl"/>
-    <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
     <fullyQualifiedTypeName name="hcmute.vn.Model.Favorites"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="hcmute.vn.Service.UserServiceImpl"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.api.DisplayName"/>
     <fullyQualifiedTypeName name="javabrains.MathUtils"/>
     <fullyQualifiedTypeName name="java.lang.InternalError"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="hcmute.vn.Dao.UserDaoImpl"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="hcmute.vn.Controllers.user.user_list_user"/>
+    <fullyQualifiedTypeName name="hcmute.vn.Model.User"/>
 </qualifiedTypeNameHistroy>

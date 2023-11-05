@@ -167,4 +167,32 @@ public class UserDaoImpl implements IUserDao {
 
 	}
 
+	@Override
+	public List<User> findUserByNameOrEmail(String input) {
+		String sql = "select * from users where fullname = ? or email =?;";
+		List<User> list = new ArrayList<User>();
+		User model = new User();
+		try {
+			conn = new DBConnection().getConnection(); // Kết nối CSDL
+			ps = conn.prepareStatement(sql); // Chuẩn bị câu truy vấn
+			// Truyền tham số vào truy vấn
+			ps.setString(1, input);
+			ps.setString(2, input);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				model.setUsername(rs.getString("Username"));
+				model.setPassword(rs.getString("Password"));
+				model.setPhone(rs.getString("Phone"));
+				model.setFullname(rs.getString("Fullname"));
+				model.setEmail(rs.getString("Email"));
+				model.setImages(rs.getString("Images"));
+				list.add(model);
+			}
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace(); // In ra mã đỏ báo lỗi
+		}
+		return list;
+	}
+
 }

@@ -21,7 +21,9 @@ import hcmute.vn.Service.IBookService;
 import hcmute.vn.utils.Constant;
 import hcmute.vn.utils.UploadUtils;
 @MultipartConfig(fileSizeThreshold = 1024*1024*10,  maxFileSize = 1024*1024*50,maxRequestSize = 1024*1024*50)
-@WebServlet(urlPatterns = "/admin-UpdateByBookID")
+@WebServlet(urlPatterns = ""
+		+ ""
+		+ "")
 public class UpdateBook extends HttpServlet {
 	IBookService bookService = new BookServiceimpl();
 	@Override

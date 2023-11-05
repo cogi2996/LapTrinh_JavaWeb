@@ -2,12 +2,12 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\ACER\eclipse-workspace\BanHang_jpaa\src\main\java\controllers\CategoryController.java"/>
 			<item value="C:\Users\ACER\eclipse-workspace\De07\src\main\webapp\views\user\liked-video.jsp"/>
 			<item value="C:\Users\ACER\eclipse-workspace\BanHang\src\main\java\hcmute\controllers\CategoryController.java"/>
 			<item value="C:\Users\ACER\eclipse-workspace\testJPA\src\main\java\vn\iotstar\Entity\product.java"/>
 			<item value="C:\Users\ACER\eclipse-workspace\BanHang\src\main\java\hcmute\f.java"/>
 			<item value="C:\Users\ACER\eclipse-workspace\POST\pom.xml"/>
-			<item value="C:\Users\ACER\eclipse-workspace\BanHang_jpaa\src\main\java\controllers\CategoryController.java"/>
 			<item value="C:\Users\ACER\eclipse-workspace\BanHang_JPA\pom.xml"/>
 			<item value="C:\Users\ACER\eclipse-workspace\HelloServlet\src\main\webapp\createSession.jsp"/>
 			<item value="C:\Users\ACER\eclipse-workspace\BanHang\pom.xml"/>
@@ -66,6 +66,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="De01Jpa"/>
 			<item value="test"/>
 			<item value="Junit"/>
 			<item value="De07"/>
@@ -82,9 +83,9 @@
 			<item value="[name]"/>
 		</list>
 		<list key="version">
+			<item value="1.0"/>
 			<item value="1"/>
 			<item value="0.0.1-SNAPSHOT"/>
-			<item value="1.0"/>
 		</list>
 	</section>
 	<section name="org.eclipse.m2e.core.pom.overview">

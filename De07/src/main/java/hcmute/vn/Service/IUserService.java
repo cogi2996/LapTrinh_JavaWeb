@@ -17,4 +17,5 @@ public interface IUserService {
 
 	User findOne(String username);
 	List<Favorites> findFavorByUsername(String username);
+	List<User> findUserByNameOrEmail(String input);
 }

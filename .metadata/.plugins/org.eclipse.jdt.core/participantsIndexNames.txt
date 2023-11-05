@@ -17,6 +17,8 @@ C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jsps
 \testJPA\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2488144092.index
 \BookStore\src\main\java
+C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2617800719.index
+\De2_jpa\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\670114518.index
 \BanHang\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2584576592.index
@@ -31,6 +33,8 @@ C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jsps
 \KiemTra\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2562037704.index
 \BanHang\src\main\java
+C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1629820488.index
+\De01Jpa\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\936022430.index
 \HelloServlet\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3929751876.index
@@ -39,6 +43,8 @@ C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jsps
 \KiemTra\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4265406134.index
 \De07\src\main\java
+C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3104509275.index
+\De01Jpa\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3357138832.index
 \social_media\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3969793636.index
@@ -47,6 +53,8 @@ C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jsps
 \BanHang\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\198725450.index
 \De07\src\main\java
+C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\396391037.index
+\De2_jpa\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1554657289.index
 \BanHang_jpaa\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1987076780.index
@@ -75,10 +83,16 @@ C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jsps
 \demoSpring\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\351371658.index
 \BanHangCopy\src\main\java
+C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1170978963.index
+\De2_jpa\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1660294265.index
 \social_media\src\main\java
+C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3757408835.index
+\De01Jpa\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3585970540.index
 \HelloServlet\src\main\java
+C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\133557599.index
+\De01Jpa\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2033760435.index
 \KiemTra\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4258710505.index
@@ -97,8 +111,12 @@ C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jsps
 \BanHangCopy\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1512937651.index
 \social_media\src\main\java
+C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1595139999.index
+\De2_jpa\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2776583619.index
 \De07\src\main\java
+C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1428435234.index
+\De2_jpa\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3537438699.index
 \BanHangCopy\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1560185499.index
@@ -135,6 +153,8 @@ C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jsps
 \HelloServlet\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\858583439.index
 \BanHangCopy\src\main\java
+C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3308117327.index
+\De01Jpa\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4033007876.index
 \BookStore\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3867543041.index
@@ -145,6 +165,8 @@ C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jsps
 \BanHangCopy\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1725212498.index
 \BanHang\src\main\java
+C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\334299285.index
+\De01Jpa\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3988877239.index
 \De01\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3726533159.index
@@ -161,3 +183,5 @@ C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jsps
 \De07\src\main\java
 C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3450887403.index
 \BanHang\src\main\java
+C:\Users\ACER\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4005588690.index
+\De2_jpa\src\main\java

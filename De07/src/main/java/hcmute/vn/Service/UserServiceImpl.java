@@ -42,6 +42,11 @@ public class UserServiceImpl implements IUserService{
 	public List<Favorites> findFavorByUsername(String username) {
 		return userDao.findFavorByUsername(username);
 	}
+	@Override
+	public List<User> findUserByNameOrEmail(String input) {
+		// TODO Auto-generated method stub
+		return userDao.findUserByNameOrEmail(input);
+	}
 	
 	
 }

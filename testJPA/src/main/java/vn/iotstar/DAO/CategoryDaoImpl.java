@@ -13,7 +13,7 @@ public class CategoryDaoImpl implements ICategoryDao {
 
 	@Override
 	public List<Category> findAll() {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated 	 stub
 		EntityManager enma = JpaConfig.getEntityManager();
 		TypedQuery<Category> query = enma.createNamedQuery("Category.findAll", Category.class);
 		return query.getResultList();
