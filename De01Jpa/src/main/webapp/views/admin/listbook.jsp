@@ -8,8 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href ='<c:url value ="/admin-addBook"></c:url>'> add new Book</a>
-	<table border="1" style="width: 100%; ">
+	<a href='<c:url value ="/admin-addBook"></c:url>'> add new Book</a>
+	<table border="1" style="width: 100%;">
 		<thead>
 			<th>book-id</th>
 			<th>Title</th>
@@ -26,7 +26,8 @@
 					<td>${item.price}</td>
 					<td>${item.cover_image}</td>
 					<td><a
-						href='<c:url value = "/admin-UpdateByBookID?bookid=${item.bookid}"/>'>cập nhật</a></td>
+						href='<c:url value = "/admin-UpdateByBookID?bookid=${item.bookid}"/>'>cập
+							nhật</a></td>
 					<td><a
 						href='<c:url value = "/admin-DeleteByBookID?bookid=${item.bookid}"/>'>xoá</a></td>
 
@@ -34,5 +35,8 @@
 			</c:forEach>
 		</tbody>
 	</table>
+	
 </body>
 </html>
+
+

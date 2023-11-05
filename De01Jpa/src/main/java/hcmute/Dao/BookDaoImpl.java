@@ -26,7 +26,6 @@ public class BookDaoImpl implements IBookDao {
 		for(Book book : list) {
 			System.out.println(book);
 		}
-//		System.out.println(bookDao.countAll());
 	}
 
 	@Override
@@ -81,7 +80,6 @@ public class BookDaoImpl implements IBookDao {
 		} finally {
 			enma.close();
 		}
-
 	}
 
 	@Override
@@ -93,24 +91,6 @@ public class BookDaoImpl implements IBookDao {
 
 	@Override
 	public List<Book> paginationPage(int index, int numberOfPage) {
-		/*
-		 * List<Book> result = new ArrayList<Book>(); String sql =
-		 * "SELECT * FROM books\r\n" + "ORDER BY bookid\r\n" + "LIMIT ? OFFSET ?;"; try
-		 * { conn = new DBConnection().getConnection(); PreparedStatement ps =
-		 * conn.prepareStatement(sql);
-		 * 
-		 * ps.setInt(1, numberOfPage); ps.setInt(2, index * numberOfPage); ResultSet rs
-		 * = ps.executeQuery(); Book book; while (rs.next()) { book = new Book();
-		 * book.setBookid(rs.getInt("bookid"));
-		 * book.setDescription(rs.getString("description"));
-		 * book.setCover_image(rs.getString("cover_image"));
-		 * book.setPrice(rs.getInt("price"));
-		 * book.setPublisher(rs.getString("publisher"));
-		 * book.setIsbn(rs.getInt("isbn")); book.setQuantity(rs.getInt("quantity"));
-		 * book.setPublish_date(rs.getDate("publish_date"));
-		 * book.setTitle(rs.getString("title")); result.add(book); } } catch (Exception
-		 * e) { e.printStackTrace(); }
-		 */
 		EntityManager enma = JPAConfig.getEntityManager();
 		TypedQuery<Book> list  = enma.createQuery("select b from Book b",Book.class);
 		list.setFirstResult(index*numberOfPage);

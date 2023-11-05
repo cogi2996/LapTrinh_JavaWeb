@@ -5,4 +5,8 @@
     <typeInfo handle="=BanHang_jpaa/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;entity{Category.java[Category" modifiers="1" timestamp="1697626428432"/>
     <typeInfo handle="=BanHang_jpaa/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;entity{Product.java[Product" modifiers="1" timestamp="1697602628063"/>
     <typeInfo handle="=testJPA/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;vn.iotstar.Entity{product.java[product" modifiers="1" timestamp="1697731074313"/>
+    <typeInfo handle="=De01Jpa/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;hcmute.Entity{Author.java[Author" modifiers="1" timestamp="1699154002069"/>
+    <typeInfo handle="=De01Jpa/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;hcmute.Entity{Book.java[Book" modifiers="1" timestamp="1699150843949"/>
+    <typeInfo handle="=De03/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;hcmute.Entity{Author.java[Author" modifiers="1" timestamp="1699174056604"/>
+    <typeInfo handle="=De03/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;hcmute.Entity{User.java[User" modifiers="1" timestamp="1699167019180"/>
 </typeInfoHistroy>
