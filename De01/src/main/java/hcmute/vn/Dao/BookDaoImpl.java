@@ -12,9 +12,7 @@ public class BookDaoImpl implements IBookDao {
 	Connection conn = null;
 	PreparedStatement ps = null;
 	ResultSet rs = null;
-	public void test() {
-		System.out.println("heelo");
-	}
+
 	@Override
 	public List<Book> findAll() {
 		String sql = "select * from books";
@@ -131,11 +129,8 @@ public class BookDaoImpl implements IBookDao {
 		try {
 			conn = new DBConnection().getConnection();
 			PreparedStatement ps = conn.prepareStatement(sql);
-
 			ps.setInt(1, numberOfPage);
 			ps.setInt(2, index * numberOfPage);
-//			System.out.println("tham so 1: "+index * numberOfPage);
-//			System.out.println("tham so 2: "+ numberOfPage);
 			ResultSet rs = ps.executeQuery();
 			Book book;
 			while (rs.next()) {
@@ -158,7 +153,6 @@ public class BookDaoImpl implements IBookDao {
 		}
 		System.out.println("end pagination");
 		return result;
-
 	}
 
 	@Override

@@ -152,7 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="De07" path="/De07" reloadable="true" source="org.eclipse.jst.jee.server:De07"/><Context docBase="De01" path="/De01" reloadable="true" source="org.eclipse.jst.jee.server:De01"/><Context docBase="BanHang_jpaa" path="/BanHang_jpaa" reloadable="true" source="org.eclipse.jst.jee.server:BanHang_jpaa"/><Context docBase="De01Jpa" path="/De01Jpa" reloadable="true" source="org.eclipse.jst.jee.server:De01Jpa"/><Context docBase="De03" path="/De03" reloadable="true" source="org.eclipse.jst.jee.server:De03"/></Host>
+      <Context docBase="De07" path="/De07" reloadable="true" source="org.eclipse.jst.jee.server:De07"/><Context docBase="De01" path="/De01" reloadable="true" source="org.eclipse.jst.jee.server:De01"/><Context docBase="BanHang_jpaa" path="/BanHang_jpaa" reloadable="true" source="org.eclipse.jst.jee.server:BanHang_jpaa"/><Context docBase="De01Jpa" path="/De01Jpa" reloadable="true" source="org.eclipse.jst.jee.server:De01Jpa"/><Context docBase="De07Jpa" path="/De07Jpa" reloadable="true" source="org.eclipse.jst.jee.server:De07Jpa"/><Context docBase="De03" path="/De03" reloadable="true" source="org.eclipse.jst.jee.server:De03"/></Host>
     </Engine>
   </Service>
 </Server>

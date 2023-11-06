@@ -23,7 +23,7 @@
 				<a class="btn btn-primary btn-sm ml-3"
 					href="/BookStore_war_exploded/login"> Đăng nhập </a> 
 			</form>
-			<form class="form-inline my-2 my-lg-0">
+		<!-- 	<form class="form-inline my-2 my-lg-0">
 				<div class="input-group input-group-sm">
 					<input type="text" class="form-control" placeholder="Search...">
 					<div class="input-group-append">
@@ -32,11 +32,11 @@
 						</button>
 					</div>
 				</div>
-				<!-- <a class="btn btn-success btn-sm ml-3" href="cart.html"> <i
+				<a class="btn btn-success btn-sm ml-3" href="cart.html"> <i
 					class="fa fa-shopping-cart"></i> Cart <span
 					class="badge badge-light">3</span>
-				</a> -->
-			</form>
+				</a>
+			</form> -->
 		</div>
 	</div>
 </nav>

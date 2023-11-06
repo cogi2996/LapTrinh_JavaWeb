@@ -9,11 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import hcmute.Dao.AuthorDaoImpl;
-import hcmute.Dao.IAuthorDao;
+import hcmute.Dao.AuthorDaoImpl_21110709;
+import hcmute.Dao.IAuthorDao_21110709;
 @WebServlet(urlPatterns = "/listNumAuthorBook")
 public class listNumAuthorBook extends HttpServlet {
-	IAuthorDao authorService = new AuthorDaoImpl();
+	IAuthorDao_21110709 authorService = new AuthorDaoImpl_21110709();
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setAttribute("AuthorBook", authorService.NumberOfBook());
