@@ -8,12 +8,16 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/De07Jpa" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/kiemtra" type="4"/>
 </workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1699585312639_7" label="HOME" name="HOME">
+<item elementID="=Social" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1692806193604_2" label="Window Working Set" name="Aggregate for window 1692806193603"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1693238927412_4" label="Multiple Working Sets" name="Aggregate:JavaCoreWorkingSet:Java Main Sources:Java Test Sources:">
 <workingSet IMemento.internal.id="JavaCoreWorkingSet"/>
 <workingSet IMemento.internal.id="Java Main Sources"/>
 <workingSet IMemento.internal.id="Java Test Sources"/>
 </workingSet>
+<mruList name="HOME"/>
 <mruList name="KiemTra-workingset"/>
 <mruList name="JavaCoreWorkingSet"/>
 <mruList name="Java Main Sources"/>
