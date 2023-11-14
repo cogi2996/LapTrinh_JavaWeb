@@ -1,9 +1,10 @@
 JRE_LIB=C\:/Program Files/Java/jdk-20/lib/jrt-fs.jar
 JRE_SRC=C\:/Program Files/Java/jdk-20/lib/src.zip
 eclipse.preferences.version=1
+org.eclipse.jdt.core.builder.invalidClasspath=abort
 org.eclipse.jdt.core.classpathVariable.ECLIPSE_HOME=C\:/Users/ACER/eclipse/jee-2023-06/eclipse/
-org.eclipse.jdt.core.classpathVariable.JRE_LIB=C\:/Program Files/Java/jdk-20/lib/jrt-fs.jar
-org.eclipse.jdt.core.classpathVariable.JRE_SRC=C\:/Program Files/Java/jdk-20/lib/src.zip
+org.eclipse.jdt.core.classpathVariable.JRE_LIB=C\:/Users/ACER/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230801-1951/jre/lib/jrt-fs.jar
+org.eclipse.jdt.core.classpathVariable.JRE_SRC=C\:/Users/ACER/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230801-1951/jre/lib/src.zip
 org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=
 org.eclipse.jdt.core.classpathVariable.JUNIT_HOME=C\:/Users/ACER/.p2/pool/plugins/org.junit_4.13.2.v20211018-1956.jar
 org.eclipse.jdt.core.classpathVariable.M2_REPO=C\:/Users/ACER/.m2/repository

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-    <typeInfo handle="=testJPA/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;vn.iotstar.Entity{Category.java[Category" modifiers="1" timestamp="1698375161552"/>
     <typeInfo handle="=testJPQL/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;hcmute.Entity{Employee.java[Employee" modifiers="1" timestamp="1697960000049"/>
-    <typeInfo handle="=BanHang_jpaa/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;entity{Category.java[Category" modifiers="1" timestamp="1697626428432"/>
-    <typeInfo handle="=BanHang_jpaa/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;entity{Product.java[Product" modifiers="1" timestamp="1697602628063"/>
-    <typeInfo handle="=testJPA/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;vn.iotstar.Entity{product.java[product" modifiers="1" timestamp="1697731074313"/>
-    <typeInfo handle="=De01Jpa/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;hcmute.Entity{Author.java[Author" modifiers="1" timestamp="1699154002069"/>
-    <typeInfo handle="=De01Jpa/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;hcmute.Entity{Book.java[Book" modifiers="1" timestamp="1699150843949"/>
     <typeInfo handle="=De07Jpa/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;hcmute.Entity{User.java[User" modifiers="1" timestamp="1699199031821"/>
+    <typeInfo handle="=RestAPI/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;Model{CategoryModel.java[CategoryModel" modifiers="1" timestamp="1699838442884"/>
+    <typeInfo handle="=social_media/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;hcmute.Entity{Account.java[Account" modifiers="1" timestamp="1699842506587"/>
+    <typeInfo handle="=social_media/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;hcmute.Entity{BoxChat.java[BoxChat" modifiers="1" timestamp="1699842417906"/>
+    <typeInfo handle="=social_media/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;hcmute.Entity{Chat.java[Chat" modifiers="1" timestamp="1699842536247"/>
+    <typeInfo handle="=social_media/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;hcmute.Entity{Group.java[Group" modifiers="1" timestamp="1699842587908"/>
+    <typeInfo handle="=social_media/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;hcmute.Entity{GroupPost.java[GroupPost" modifiers="1" timestamp="1699889055700"/>
+    <typeInfo handle="=social_media/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;hcmute.Entity{User.java[User" modifiers="1" timestamp="1699889204731"/>
+    <typeInfo handle="=social_media/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;hcmute.Entity{UserPost.java[UserPost" modifiers="1" timestamp="1699889159092"/>
 </typeInfoHistroy>

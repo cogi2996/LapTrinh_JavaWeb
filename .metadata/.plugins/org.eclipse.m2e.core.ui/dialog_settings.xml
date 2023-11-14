@@ -2,21 +2,21 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\ACER\Downloads\testFinal\src\main\java\testFinal\test.java"/>
+			<item value="D:\năm 3\lập trình web\tuan14\src\main\java\controller\test.java"/>
+			<item value="D:\năm 3\lập trình web\social_meia\alohcmute\src\main\java\alohcmute\test.java"/>
+			<item value="C:\Users\ACER\eclipse-workspace"/>
+			<item value="D:\năm 3\lập trình web\backup\SOCIAL_MEIDA"/>
+			<item value="C:\Users\ACER\Downloads\tuan14\src\main\java\controller\test.java"/>
+			<item value="D:\năm 3\lập trình web\backup\SOCIAL_MEIDA\src\main\java\hcmute\Entity\User.java"/>
+			<item value="D:\năm 3\lập trình web\social_meia\social_media\src\main\java\hcmute\Entity\Group.java"/>
+			<item value="D:\năm 3\lập trình web\maventest"/>
+			<item value="D:\năm 3\lập trình web\social_meia\FINAL_PROJECT"/>
+			<item value="D:\năm 3\lập trình web\social_meia\FINALPROJECT"/>
+			<item value="D:\năm 3\lập trình web\social_meia"/>
+			<item value="C:\Users\ACER\eclipse-workspace\De07Jpa\pom.xml"/>
+			<item value="C:\Users\ACER\eclipse-workspace\HelloServlet"/>
 			<item value="C:\Users\ACER\eclipse-workspace\junitTest"/>
-			<item value="C:\Users\ACER\eclipse-workspace\junitTest\src\test\java\junitTest\CalculatorTest.java"/>
-			<item value="C:\Users\ACER\eclipse-workspace\De01Jpa\src\main\java\hcmute\Controllers\user\BookController.java"/>
-			<item value="C:\Users\ACER\eclipse-workspace\BanHang_jpaa\src\main\java\controllers\CategoryController.java"/>
-			<item value="C:\Users\ACER\eclipse-workspace\De07\src\main\webapp\views\user\liked-video.jsp"/>
-			<item value="C:\Users\ACER\eclipse-workspace\BanHang\src\main\java\hcmute\controllers\CategoryController.java"/>
-			<item value="C:\Users\ACER\eclipse-workspace\testJPA\src\main\java\vn\iotstar\Entity\product.java"/>
-			<item value="C:\Users\ACER\eclipse-workspace\BanHang\src\main\java\hcmute\f.java"/>
-			<item value="C:\Users\ACER\eclipse-workspace\POST\pom.xml"/>
-			<item value="C:\Users\ACER\eclipse-workspace\BanHang_JPA\pom.xml"/>
-			<item value="C:\Users\ACER\eclipse-workspace\HelloServlet\src\main\webapp\createSession.jsp"/>
-			<item value="C:\Users\ACER\eclipse-workspace\BanHang\pom.xml"/>
-			<item value="C:\Users\ACER\eclipse-workspace\BanHang\src\main\java\hcmute\DAO\CategoryDAOImpl.java"/>
-			<item value="C:\Users\ACER\eclipse-workspace\BanHang\src\main\webapp\views\category\listcategory.jsp"/>
-			<item value="D:\năm 3\lập trình web\tuần_05\src\main\java\hcmute\controllers\DB.java"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -59,12 +59,16 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="test"/>
 			<item value="hcmute"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="9"/>
+			<item value="testFinallllll"/>
+			<item value="testFinal"/>
+			<item value="test"/>
+			<item value="alohcmute"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -75,8 +79,8 @@
 			<item value="[name]"/>
 		</list>
 		<list key="version">
-			<item value="1.0"/>
 			<item value="0.0.1-SNAPSHOT"/>
+			<item value="1.0"/>
 		</list>
 	</section>
 	<section name="org.eclipse.m2e.core.pom.overview">

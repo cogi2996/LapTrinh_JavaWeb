@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -17,6 +19,7 @@ import javax.persistence.Table;
 @NamedQuery(name = "UserPost.findAll", query = "select uP from UserPost uP")
 public class UserPost {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int userPostID;
 	private int userID;
 	private String userPostText;
@@ -24,12 +27,10 @@ public class UserPost {
 	private boolean UserPostStatus;
 	private Date userPostUpdateTime;
 
-	// 1-nhiều giữa user và userpost
+	//User đã đăng bài viết này.
 	@ManyToOne
 	@JoinColumn(name = "userID")
 	private User user;
 
-	// 1-nhiều giữa userimage với userpost
-	@OneToMany(mappedBy = "uPost", fetch = FetchType.EAGER)
-	private List<UserImage> uImages;
+
 }

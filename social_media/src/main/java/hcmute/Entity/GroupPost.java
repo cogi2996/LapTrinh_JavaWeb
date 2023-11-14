@@ -6,6 +6,8 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -21,20 +23,19 @@ public class GroupPost implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int groupPostID;
 	private String groupPostText;
 	private Date groupPostCreateTime;
 	private boolean groupPostStatus;
 	private Date groupPostUpdateTime;
 
-	// 1 nhiều với GroupImage
-	@OneToMany(mappedBy = "grPost", fetch = FetchType.EAGER)
-	private List<GroupImage> grImages;
 
-	// 1 nhiều với User
+	// Các bài viết của user đã đăng
 	@ManyToOne
 	@JoinColumn(name = "userID")
 	private User user;
+	
 	// 1 - n với group
 	@ManyToOne
 	@JoinColumn(name = "groupID")
