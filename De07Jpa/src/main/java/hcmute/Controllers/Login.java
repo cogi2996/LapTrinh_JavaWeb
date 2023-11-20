@@ -37,11 +37,11 @@ public class Login extends HttpServlet {
 			// thiết lập thời gian tồn tại session
 			s.setMaxInactiveInterval(60 * 60 * 24);
 			Cookie userCookies = new Cookie("username", username);
-			// time to live
 			userCookies.setMaxAge(60 * 60 * 24);
+			resp.addCookie(userCookies);
+			// time to live
 			// add obj cookies into response
 			resp.setCharacterEncoding("UTF-8");
-			resp.addCookie(userCookies);
 			resp.sendRedirect(req.getContextPath() + "/admin-listUser");
 		}
 		else {

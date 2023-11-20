@@ -9,6 +9,7 @@ import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -43,6 +44,9 @@ public class XuLyDangNhap extends HttpServlet{
 			session.setAttribute("username", userSession.getName());
 			// Thiết lập thời gian tồn tại của phiên làm việc trong 5 phút
 			session.setMaxInactiveInterval(60 * 5);
+			Cookie userCookies = new Cookie("username", userSession.getName());
+			userCookies.setMaxAge(60 * 60 * 24);
+			resp.addCookie(userCookies);
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

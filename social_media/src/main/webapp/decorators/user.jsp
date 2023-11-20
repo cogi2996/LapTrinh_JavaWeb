@@ -31,8 +31,11 @@
 </head>
 <body>
 	<%@include file="/common/user/header.jsp"%>
-	<%@include file="/common/user/left.jsp"%>
-	<decorator:body></decorator:body>
+	<div class="container-fluid" style="margin-top: 56px">
+		<%@include file="/common/user/left.jsp"%>
+		<decorator:body></decorator:body>
+		
+	</div>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 	<script src='<c:url value = "/templates/user/script/main.js"></c:url>'></script>
